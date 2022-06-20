@@ -1,0 +1,73 @@
+{% include 'AGENT/base_template.html' %}
+{% load static %}
+{% block content %}
+<div class="input-group">
+   
+    <button type="button" class="btn btn-primary">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Income Details</h4>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+            </div>
+            
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">No#</th>
+                            <th scope="col">User Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Income</th>
+                            <th scope="col">Date</th>
+                            
+                            
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>R564546</td>
+                                  <td>Raman</td>
+                                  <td>56454</td>
+                                  <td>12-5-2022</td>
+                                  
+                             
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                  <td>T54646</td>
+                                  <td>Kamal</td>
+                                  <td>65465464</td>
+                                  <td>12-5-2022</td>
+                                </tr>
+                                
+                              </tbody>
+                            
+
+                          
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+    
+{% endblock  %}

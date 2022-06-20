@@ -1,0 +1,413 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="css2-2?family=Mulish:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><title>
+	JSMProInfra
+</title><link rel="stylesheet" href="admin/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="admin/assets/css/main.css"><link rel="stylesheet" href="admin/assets/css/color_skins.css"><link href="admin/assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet"><link href="css2?family=Jost:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"><link href="css2-1?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
+	<style>
+      body {
+	background: url(images/slider-1.jpg);
+	background-size:cover;
+	background-attachment:fixed;
+    font-family:Jost;
+	
+}
+.form-controls {
+	display: block;
+	width: 100%;
+	height: 44px;
+	padding: 6px 12px;
+	font-size: 15px;
+	line-height: 1.42857143;
+	color: #111650;
+	background: none !important;
+	background: #fff !important;
+	border: 2px solid #b9c0ca;
+	border-radius: 5px;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-group label.control-label {
+	font-size: 14px;
+	line-height: 1.0714285718;
+	color: #111;
+	font-weight: 600;
+	margin: 0;
+	margin-bottom: 9px;
+	margin-top: 9px;
+	text-transform: capitalize;
+}
+
+        a
+        {
+            color: #86b040;
+        }
+
+        .form-group
+        {
+            padding-bottom: 1px;
+            margin: 0;
+        }
+
+        .card .body {
+
+	font-weight: 400;
+}
+
+
+
+
+.card {
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	border-radius: 8px;
+	background: #ffffffcf;
+	min-height: 50px;
+	position: relative;
+	border: none;
+}
+
+    .card .header h2 {
+	font-weight: 600;
+	color: #12174f;
+}
+
+
+        .log
+        {
+           
+            margin-top: 50px;
+        }
+
+      
+
+
+        .text-left.textstyle
+        {
+            font-size: 14px !important;
+            color: #7d7d7d;
+        }
+
+
+        table#rbllogin > tbody > tr > td > label
+        {
+            text-align: left !important;
+        }
+
+        #lbtnLogin {
+	padding: 10px;
+	box-shadow: none;
+	font-weight: 600;
+	border-radius: 4px;
+	background: #ff6e00 !important;
+}
+        .btn:not(.btn-link):not(.btn-circle) i {
+	font-size: 14px;
+	position: relative;
+	top: 0px;
+}
+        .gmail{
+            background:#e34133;
+            color:#fff;
+        }
+
+        .Facebook{
+            background:#1773ea;
+            color:#fff;
+        }
+
+		.card {
+border-radius: 11px !important;
+overflow: hidden;
+		}
+
+          .bootstrap-select.btn-group .dropdown-menu.inner{display:block;}
+        .btn:not(.btn-link):not(.btn-circle) {border: 1px solid #616161;
+        }
+     </style>
+     <script src="js/jquery-1.12.4.min.js"></script>
+
+    <script type="text/javascript">
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- Mobile menu end -->
+   
+            <form name="form1" method="post" action="./Register.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0NjkzNjg0MDgPZBYCAgEPZBYCAgkPEGQQFQAVABQrAwBkZGQgzb4WILpAgHATKQUYBge0Hkb58A==">
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="799CC77D">
+
+             
+            
+                    <div class="container-fullid">
+                        <div class="row">
+                           
+
+                            <div class="offset-md-6 col-md-6 log slideDown">
+                                <div class="card">
+                                     <a href="index.html" style="background:#fff; padding-top:10px;">
+                        <img src="images/logo.png" style="max-width: 90px; margin-bottom: 14px !important; margin: 0 auto; margin-bottom: 0px; display: block;">
+                    </a>
+                                   
+
+                                    <div class="header">
+                                        <h2 class="panel__tit">Create Account ! </h2>
+                                    </div>
+                                    <div class="body">
+                                        <div class="form-horizontal">
+                                            <div class=" row form-group">
+                                                <div class="col-sm-6">
+                                                    <label class="control-label " for="email">Sponsor ID *</label>
+                                                    <input name="txtSponsorId" type="text" id="txtSponsorId" class="form-controls" placeholder="Enter Sponsor ID">
+                                                    <span id="lblSponsor" style="color: Green; position: absolute; right: 25px; top: 44px;"><font color="Green"></font></span>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label class="control-label " for="email">Sponsor Password *</label>
+                                                    <input name="txtsponsorpwd" type="text" id="txtsponsorpwd" class="form-controls" placeholder="Enter Sponsor Password">
+                                                    <span id="lblspnosorpwd"><font color="Red"></font></span>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label class="control-label " for="email">Select Level No *</label>
+                                                    <select name="ddl_level" id="ddl_level" class="form-control">
+
+</select>
+                                                    <span id="lblpin"></span>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label class="control-label " for="email">Associate's Name *</label>
+                                                    <input name="txtName" type="text" id="txtName" class="form-controls" placeholder="Enter Name">
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label class="control-label " for="email">Mobile Number *</label>
+                                                    <input name="txtphone" type="text" maxlength="10" id="txtphone" class="form-controls" minlength="10" placeholder="Enter Mobile Number" onkeypress="return isNumber(event)">
+                                                    <span id="lblMobileno"></span>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label class="control-label " for="email">Pan Card Number *</label>
+                                                    <input name="txtpan" type="text" id="txtpan" class="form-controls" placeholder="Enter Pan card Number">
+                                                    <span id="Label1"></span>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label class="control-label " for="email">Aadhar Number *</label>
+                                                    <input name="txtaadhar" type="text" id="txtaadhar" class="form-controls" placeholder="Enter Aadhar Number">
+                                                    <span id="lblaadhar"></span>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label class="control-label " for="email">Password *</label>
+                                                    <input name="txtPassword" type="password" id="txtPassword" class="form-controls" placeholder="Enter Password">
+                                                </div>
+                                            </div>
+                                            <br>
+
+                                            <div class="row form-group">
+                                                <div class="col-sm-12">
+                                                    <div>
+                                                        <span class="filled-in chk-col-cyan">
+                                                            <input id="CheckBox1" type="checkbox" name="CheckBox1">
+                                                            <label for="CheckBox1">I agree to the Terms &amp; Condition.</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <a onclick="return validateRegister();" id="lbtnRegister" class="btn btn-raised btn-primary m-t-15 waves-effect" href="javascript:__doPostBack('lbtnRegister','')">Create Account</a>
+                                                    <span id="lblMessage"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 m-t-20">Already have an Account<a class="" href="login.aspx.html"> Login</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+            </form>
+       
+            <script src="admin/assets/bundles/libscripts.bundle.js"></script>
+        <!-- Lib Scripts Plugin Js -->
+        <script src="admin/assets/bundles/vendorscripts.bundle.js"></script>
+        <!-- Lib Scripts Plugin Js -->
+
+        <script src="admin/assets/bundles/mainscripts.bundle.js"></script>
+        <!-- Custom Js -->
+        <script src="admin/assets/js/pages/forms/basic-form-elements.js"></script>
+ 
+   
+    <script src="js/notify.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+
+    <script type="text/javascript">
+        function showNotification(types, messages) {
+            $.notify({
+                icon: "notifications",
+                message: messages
+            }, {
+                    type: types,
+                    timer: 2000,
+                    placement: {
+                        from: 'top',
+                        align: 'right'
+                    }
+                });
+        }
+
+        function checkSponsorAvailability() {
+            $.ajax({
+                type: "POST",
+                url: "Register.aspx/SponserCheck",
+                data: "{sponsorId: '" + $("#txtSponsorId").val() + "' }",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: onSuccess,
+                failure: function (AjaxResponse) {
+                    document.getElementById("lblMessage").innerHTML = "Error occured..";
+                }
+            });
+            function onSuccess(AjaxResponse) {
+                if (AjaxResponse.d != "Invalid Sponsor id.") {
+                    document.getElementById("lblSponsor").innerHTML = AjaxResponse.d;
+                    document.getElementById("lblSponsor").setAttribute("class", "text-success");
+                    $("#lbtnRegister").removeAttr("disabled");
+                }
+                else {
+                    document.getElementById("lblSponsor").innerHTML = "Invalid sponsor\'s Id.";
+                    document.getElementById("lblSponsor").setAttribute("class", "text-danger");
+                    $("#lbtnRegister").attr("disabled", "disabled");
+                }
+            }
+        }
+        function validateRegister() {
+
+            var Pinno = document.getElementById("ddl_level");
+            var sponsorId = document.getElementById("txtSponsorId");
+            var tname = document.getElementById("txtName");
+            var txtphone = document.getElementById("txtphone");
+            var address = document.getElementById("txtpan")
+            var password = document.getElementById("txtPassword");
+
+            if (Pinno.value == "0") {
+                Pinno.focus();
+                $("#txtpinno").notify("Please select level Number.", { position: "bottom" });
+                return false;
+            }
+
+            if (sponsorId.value == "") {
+                sponsorId.focus();
+                $("#txtSponsorId").notify("Please enter sponsor\'s id.", { position: "bottom" });
+                return false;
+            }
+
+            if (tname.value == "") {
+                tname.focus();
+                $("#txtName").notify("Please enter Associate name.", { position: "bottom" });
+                return false;
+            }
+
+            if (txtphone.value == "") {
+                txtphone.focus();
+                $("#txtphone").notify("Please mobile no.", { position: "bottom" });
+                return false;
+            }
+            else {
+                var PhoneValid = /^([0-9]{10})$/
+                if (!PhoneValid.test(txtphone.value)) {
+                    txtphone.focus();
+                    $("#txtphone").notify("Please Enter a valid mobile no.", { position: "bottom" });
+                    return false;
+                }
+            }
+
+            if (Email.value == "") {
+                Email.focus();
+                $("#txtEmailId").notify("Please enter email id.", { position: "bottom" });
+                return false;
+            }
+            else {
+                var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+                if (!reg.test(Email.value)) {
+                    Email.focus();
+                    $("#txtEmailId").notify("Please enter a valid email id.", { position: "bottom" });
+                    return false;
+                }
+            }
+
+            if (address.value == "") {
+                address.focus();
+                $("#txtpan").notify("Please enter Pan Card No.", { position: "bottom" });
+                return false;
+            }
+
+            if (password.value == "") {
+                password.focus();
+                $("#txtPassword").notify("Please enter password.", { position: "bottom" });
+                return false;
+            }
+            else {
+                if (password.value.length < 6) {
+                    password.focus();
+                    $("#txtPassword").notify("Minimum 6 length required.", { position: "bottom" });
+                    return false;
+                }
+            }
+
+            if (confPassword.value == "") {
+                confPassword.focus();
+                $("#txtConfmPassword").notify("Please enter confirm password.", { position: "bottom" });
+                return false;
+            }
+
+            if (confPassword.value != password.value) {
+                confPassword.focus();
+                $("#txtConfmPassword").notify("Confirm password did not match with password.", { position: "bottom" });
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

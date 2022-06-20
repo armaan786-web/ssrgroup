@@ -1,0 +1,66 @@
+{% extends "base1.html" %}
+{% block content %}
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="page-titles">
+            <ol class="breadcrumb">
+                
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Update Plot Installment Details</a></li>
+            </ol>
+        </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="row form-material">
+                           
+                            <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                <label class="form-label"> Enter Plot No.</label>
+                                <input class="form-control" id="timepicker" placeholder="Enter Plot NO.">
+                            </div>
+                            <div class="col-xl-3 col-xxl-6 col-md-6 mb -3">
+                                <label class="form-label"> Enter Installment Amount</label>
+                                <input type="text" class="form-control" placeholder="Enter Amount" >
+                            </div>
+                            <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                <label class="form-label">Enter Offer Amount</label>
+                                <input type="text" class="form-control" placeholder="Enter Amount" >
+                            </div>
+                            <div class="col-xl-3 col-xxl-6 col-md-6">
+                                <label class="form-label">PayMode</label>
+                                <select>  
+                                    <option>Cash</option> 
+                                    <option>Upi</option> 
+                                     <option>Credit Card</option>   
+                                     <option>Debit Card</option>   
+                                     <option>Paytm</option>   
+                                </select>
+                            </div>
+                            <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                <label class="form-label">Enter Date</label>
+                                <input type="date" class="form-control" placeholder="Enter Amount" > 
+                            </div>
+                           
+                            <div class="col-xl-3 col-xxl-6 col-md-6">
+                                <label class="form-label">Remark</label>
+                                <input type="text" class="form-control" placeholder="Enter " >
+                            </div>
+                            
+                            <div class="col-xl-3 col-xxl-6 col-md-6">
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+    {% endblock %}

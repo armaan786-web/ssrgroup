@@ -1,0 +1,117 @@
+{% load static %}
+<!-- Start Navigation -->
+ {% comment %} <div class="top-header">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6">
+                <div class="cn-info">
+                    <ul>
+                        <li><i class="ti-email"></i>ssrhomezone@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <ul class="top-social">
+                    <li><a href="#"><i class="lni-facebook"></i></a></li>
+                    <li><a href="#"><i class="lni-linkedin"></i></a></li>
+                    <li><a href="#"><i class="lni-instagram"></i></a></li>
+                    <li><a href="#"><i class="lni-twitter"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div> {% endcomment %}
+<div class="header header-light">
+    <div class="container">
+        <nav id="navigation" class="navigation navigation-landscape">
+            <div class="nav-header">
+                <a class="nav-brand" href="#"><img src="{% static 'images/lat.png' %}" class="logo" alt=""></a>
+                {% comment %} <img src="{% static 'images/lat.png' %}" {% endcomment %}
+                <div class="nav-toggle"></div>
+            </div>
+            
+            <div class="nav-menus-wrapper" style="transition-property: none;" >
+                <ul class="nav-menu">
+                    <li class="active nav-color">
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about' %}">About Us</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact' %}">Contact Us</a>
+                    </li>
+                    <li>
+                        {% comment %} <a href="">Property Plot</a> {% endcomment %}
+                    </li>
+                    <li>
+                        <a href="{% url 'login' %}" class="bg-dark" style="border-radius:8px; color: #FFF;">Login Now</a>
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;
+                        <a href="#" class="bg-dark" style="border-radius:8px; color: #FFF;" data-toggle="modal" data-target="#exampleModalCenter" tabindex="-1" role="button">Customer Login</a>
+                        {% comment %} <a href="{% url 'customer' %}" class="bg-dark" style="border-radius:8px; color: #FFF;">Customer Login</a> {% endcomment %}
+                        
+                    </li>
+                    
+                    {% comment %} <li><a href="#" class="btn btn-primary btn-lg text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop" tabindex="-1" role="button">Customer Login</a></li> {% endcomment %}
+             <!-- Button trigger modal -->
+                
+            <!-- Modal -->
+           
+
+
+                    
+
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+  
+  <!-- Modal -->
+  <form action="{% url 'doCustomerLogin' %}" method="POST">
+    {% csrf_token %}
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle"><em>Customer Login</em></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% include 'includes/messages.html' %}
+        <div class="modal-body">
+            <div class="form">
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="typeEmailX-2">Email</label>
+                    <input type="text" id="typeEmailX-2" class="form-control form-control-lg" name='email' required />
+                    
+                </div>
+    
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="typePasswordX-2">Password</label>
+                    <input type="password" id="typePasswordX-2" class="form-control form-control-lg" name="password" required />
+                    
+                </div>
+            </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+        
+<!-- End Navigation -->
+<div class="clearfix"></div>
+
+      

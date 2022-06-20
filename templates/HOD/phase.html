@@ -1,0 +1,49 @@
+{% extends "base1.html" %}
+{% block content %}
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Form</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Create Phase</a></li>
+            </ol>
+        </div>
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Create Phase</h4>
+                    </div>
+                    {% include 'includes/messages.html' %}
+                    <div class= "btn btn-primary">
+
+                    </div>
+                    
+                    <div class="card-body">         
+                           
+                            <form action="" method="POST">
+                                <div class="row form-material">
+                                {% csrf_token %}
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">Phase</label>
+                                    <input class="form-control" id="phase" name="phase"  required>
+                                </div>
+                               
+                                
+                            </div>
+                            <div class="col-xl-3 col-xxl-6 col-md-6">
+                                <button type="submit" class="btn btn-primary">Create</button>
+                            </div>
+                                
+                            </form>
+                                                   
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+    {% endblock %}

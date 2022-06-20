@@ -1,0 +1,70 @@
+{% include 'AGENT/base_template.html' %}
+{% load static %}
+{% block content %}
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Form</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Add Customer</a></li>
+            </ol>
+        </div>
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Add Customer</h4>
+                    </div>
+                    {% include 'includes/messages.html' %}
+                    <div class= "btn btn-primary">
+
+                    </div>
+                    <div class="card-body">
+                        
+                           
+                            <form action="{% url 'update_customer1' %}" method="POST">
+                                <div class="row form-material">
+                                {% csrf_token %}
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">Customer Id</label>
+                                    <input class="form-control" id="cust_id" name="cust_id" placeholder="Enter Customer id" value="{% for i in customer %}{{i.customer_id}}{% endfor %}" name="cust_id" readonly>
+                                </div>
+                                <input type="text" class="form-control" name = "customer_id" value = "{% for i  in customer  %} {{i.id}}{% endfor %}" hidden  >
+                                {% comment %} <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">Customer Id</label> 
+                                    <input type="text" class="form-control" name = "customer_id" value = "{% for i  in customer  %} {{i.id}}{% endfor %}" hidden  >
+                                    <input class="form-control" id="cust_id" name="cust_id" placeholder="Enter Customer id" value="{% for i in customer %}{{i.customer_id}}{% endfor %}"> 
+                                </div> {% endcomment %}
+                                {% comment %} <input type="text" class="form-control" name = "bookplot_id" value = "{% for i  in bookplot  %} {{i.id}}{% endfor %}" hidden >  {% endcomment %}
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb -3">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" name = "name" id="name" placeholder="Enter Name" value = "{% for i in customer %}{{i.customer_name}}{% endfor %}" readonly>
+                                </div>
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">Father's Name</label>
+                                    <input type="text" class="form-control" id="father_name" name="father_name" placeholder="Enter Father's Name" value="{% for i in customer  %}{{i.cust_father_name}}{% endfor %}">
+                                </div>
+                                <div class="col-xl-3 col-xxl-6 col-md-6">
+                                    <label class="form-label">Mobile No.</label>
+                                    <input type="number" class="form-control" id="mob_no" name="mob_no" placeholder="Enter Mobile No." value="{% for i in customer  %}{{i.cust_mobileno}}{% endfor %}" >
+                                </div> 
+                               
+                               
+                                
+                               
+                            </div>
+                            <div class="col-xl-3 col-xxl-6 col-md-6">
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                                
+                            </form>                         
+                       
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+    {% endblock %}

@@ -1,0 +1,226 @@
+[4:05 pm, 27/01/2022] Manis Django Patner: {% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+    <!-- Main content -->
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Profile Datatable</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="example3" class="display min-w850">
+                        <thead>
+                            <tr>
+                                <th>#SI NO</th>
+                                <th>User Id</th>
+                                <th>Name</th>
+                                <th>Plot No</th>
+                                <th>Amount</th>
+                                <th>Payment Mode</th>
+                                <th>Client Mobile</th>
+                                <th>Address</th>
+                                <th>Sponser Id</th>
+                                <th>Associate Mobile No</th>
+                                <th>Date</th>
+                                <th>Remarks</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>>1</td>
+                                <td>Tiger Nixon</td>
+                                <td>Architect</td>
+                                <td>Male</td>
+                                <td>M.COM., P.H.D.</td>
+                                <td><a href="javascript:void(0);"><strong>123 456 7890</strong></a></td>
+                                <td><a href="javascript:void(0);"><strong><span class="_cf_email_" data-cfemail="bbd2d5ddd4fbdec3dad6cbd7de95d8d4d6">[email&#160;protected]</span></strong></a></td>
+                                <td>2011/04/25</td>
+                                <td>2011/04/25</td>
+                                <td>2011/04/25</td>
+                                <td>2011/04/25</td>
+                                <td>2011/04/25</td>
+                                <td>
+                                    <div class="d-flex">        
+                                        <button class="button shadow" style="border-radius: 12px; background-color: #4CAF50;border: none;color: white;padding: 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 12px;margin: 4px 2px;cursor: pointer;">Approve Plot</button>                              
+                                        <button class="button shadow" style="border-radius: 12px; background-color: #FF0000;border: none;color: white;padding: 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 12px;margin: 4px 2px;cursor: pointer;">Cancel Plot</button>                              
+                                    </div>												
+                                </td>												
+                            </tr>
+                            <tr>
+                                <td><img class="rounded-circle" width="35" src="images\profile\small\pic2.jpg" alt=""></td>
+                                <td>Garrett Winters</td>
+                                <td>Accountant</td>
+                                <td>Female</td>
+                                <td>M.COM., P.H.D.</td>
+                                <td><a href="javascript:void(0);"><strong>987 654 3210</strong></a></td>
+                                <td><a href="javascript:void(0);"><strong><span class="_cf_email_" data-cfemail="1a73747c755a7f627b776a767f34797577">[email&#160;protected]</span></strong></a></td>
+                                <td>2011/07/25</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img class="rounded-circle" width="35" src="{% static 'images/profile/small/pic3.jpg' %}" alt=""></td>
+                                <td>Ashton Cox</td>
+                                <td>Junior Technical</td>
+                                <td>Male</td>
+                                <td>B.COM., M.COM.</td>
+                                <td><a href="javascript:void(0);"><strong>(123) 4567 890</strong></a></td>
+                                <td><a href="javascript:void(0);"><strong><span class="_cf_email_" data-cfemail="d2bbbcb4bd92b7aab3bfa2beb7fcb1bdbf">[email&#160;protected]</span></strong></a></td>
+                                <td>2009/01/12</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img class="rounded-circle" width="35" src="{% static 'images/profile/small/pic4.jpg' %}" alt=""></td>
+                                <td>Cedric Kelly</td>
+                                <td>Developer</td>
+                                <td>Male</td>
+                                <td>B.COM., M.COM.</td>
+                                <td><a href="javascript:void(0);"><strong>123 456 7890</strong></a></td>
+                                <td><a href="javascript:void(0);"><strong><span class="_cf_email_" data-cfemail="553c3b333a15302d34382539307b363a38">[email&#160;protected]</span></strong></a></td>
+                                <td>2012/03/29</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                                <td>2012/03/29</td>
+                                <td>2012/03/29</td>
+                                <td>2012/03/29</td>
+                                <td>2012/03/29</td>
+                            </tr>
+                            <tr>
+                                <td><img class="rounded-circle" width="35" src="{% static 'images/profile/small/pic5.jpg' %}" alt=""></td>
+                                <td>Airi Satou</td>
+                                <td>Accountant</td>
+                                <td>Female</td>
+                                <td>B.A, B.C.A</td>
+                                <td><a href="javascript:void(0);"><strong>987 654 3210</strong></a></td>
+                                <td><a href="javascript:void(0);"><strong><span class="_cf_email_" data-cfemail="a3cacdc5cce3c6dbc2ced3cfc68dc0ccce">[email&#160;protected]</span></strong></a></td>
+                                <td>2008/11/28</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img class="rounded-circle" width="35" src="{% static 'images/profile/small/pic6.jpg' %}" alt=""></td>
+                                <td>Brielle Williamson</td>
+                                <td>Specialist</td>
+                                <td>Male</td>
+                                <td>B.COM., M.COM.</td>
+                                <td><a href="javascript:void(0);"><strong>123 456 7890</strong></a></td>
+                                <td><a href="javascript:void(0);"><strong><span class="_cf_email_" data-cfemail="f49d9a929bb4918c9599849891da979b99">[email&#160;protected]</span></strong></a></td>
+                                <td>2012/12/02</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img class="rounded-circle" width="35" src="images\profile\small\pic7.jpg" alt=""></td>
+                                <td>Herrod Chandler</td>
+                                <td>Sales Assistant</td>
+                                <td>Female</td>
+                                <td>B.A, B.C.A</td>
+                                <td><a href="javascript:void(0);"><strong>987 654 3210</strong></a></td>
+                                <td><a href="javascript:void(0);"><strong><span class="_cf_email_" data-cfemail="99f0f7fff6d9fce1f8f4e9f5fcb7faf6f4">[email&#160;protected]</span></strong></a></td>
+                                <td>2012/08/06</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img class="rounded-circle" width="35" src="{% static 'images/profile/small/pic8.jpg' %}" alt=""></td>
+                                <td>Rhona Davidson</td>
+                                <td>Integration</td>
+                                <td>Male</td>
+                                <td>B.TACH, M.TACH</td>
+                                <td><a href="javascript:void(0);"><strong>(123) 4567 890</strong></a></td>
+                                <td><a href="javascript:void(0);"><strong><span class="_cf_email_" data-cfemail="650c0b030a25001d04081509004b060a08">[email&#160;protected]</span></strong></a></td>
+                                <td>2010/10/14</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img class="rounded-circle" width="35" src="{% static 'images/profile/small/pic9.jpg' %}" alt=""></td>
+                                <td>Colleen Hurst</td>
+                                <td>Javascript Developer</td>
+                                <td>Female</td>
+                                <td>B.A, B.C.A</td>
+                                <td><a href="javascript:void(0);"><strong>(123) 4567 890</strong></a></td>
+                                <td><a href="javascript:void(0);"><strong><span class="_cf_email_" data-cfemail="a5cccbc3cae5c0ddc4c8d5c9c08bc6cac8">[email&#160;protected]</span></strong></a></td>
+                                <td>2009/09/15</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img class="rounded-circle" width="35" src="{% static 'images/profile/small/pic10.jpg' %}" alt=""></td>
+                                <td>Sonya Frost</td>
+                                <td>Software Engineer</td>
+                                <td>Male</td>
+                                <td>B.COM., M.COM.</td>
+                                <td><a href="javascript:void(0);"><strong>123 456 7890</strong></a></td>
+                                <td><a href="javascript:void(0);"><strong><span class="_cf_email_" data-cfemail="90f9fef6ffd0f5e8f1fde0fcf5bef3fffd">[email&#160;protected]</span></strong></a></td>
+                                <td>2008/12/13</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                           
+                          
+                           
+                           
+                          
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+  <!-- Modal -->
+
+    <!-- /.content -->
+    
+    {% endblock  %}
+[4:06 pm, 27/01/2022] Manis Django Patner: <button class="button shadow" style="border-radius: 12px; background-color: #4CAF50;border: none;color: white;padding: 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 12px;margin: 4px 2px;cursor: pointer;">Approve Plot</button>                              
+                                        <button class="button shadow" style="border-radius: 12px; background-color: #FF0000;border: none;color: white;padding: 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 12px;margin: 4px 2px;cursor: pointer;">Cancel Plot</button>

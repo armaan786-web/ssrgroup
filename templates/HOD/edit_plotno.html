@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">UPDATE</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">UPDATE PLOT NO</a></li>
+            </ol>
+        </div>
+        
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Update Plot Number</h4>
+                    </div>
+                    {% include 'includes/messages.html' %}
+                    <div class="btn btn-primary">
+
+                    </div>
+                    
+                       
+                    <div class="card-body">
+                        <form action="{% url 'update_plotno' %}" method="POST">
+                            {% csrf_token %}
+                            <div class="row form-material">
+                           
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">Plot No.</label>
+                                    <input type= "text" class="form-control" id="plotno" placeholder="Enter Plot NO." name="plot_no" value="{% for i in plot_no %}{{i.plot_no}}{% endfor %}">
+                                </div>
+                                <input type="text" class="form-control" name = "plot_id" value = "{% for i  in plot_no  %} {{i.id}}{% endfor %}" hidden  >
+                                 <div class="col-xl-3 col-xxl-6 col-md-6 mb -3">
+                                    <label class="form-label">Plot Size</label>
+                                    <input type="number" class="form-control" placeholder="Type in sqft"id="plotsize" name="plot_size" value= "{% for i in plot_no %}{{i.plot_size}}{% endfor %}">
+                                </div>
+                                {% comment %} <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">PLC Rate</label>
+                                    <input type="number" class="form-control" placeholder="In % only" id="plcrate" name="plc_rate" value="{% for i in plot_no %}{{i.plc_rate}}{% endfor %}">
+                                </div> {% endcomment %}
+                                {% comment %} <div class="col-xl-3 col-xxl-6 col-md-6">
+                                    <label class="form-label">PLC</label>
+                                    <input type="number" class="form-control" placeholder="Type here" id="plc"  name="plc" value="{% for i in plot_no %}{{i.plc}}{% endfor %}">
+                                </div> {% endcomment %}
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">Plot Rate</label>
+                                    <input type="number" class="form-control" placeholder="Enter here" id="plot_rate" name="plot_rate" value="{% for i in plot_no  %}{{i.plot_rate}}{% endfor %}" >
+                                </div>
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">Phase</label>
+                                    {% comment %} <input type="text" class="form-control" placeholder="Enter here" id="plot_phase" name="plot_phase" value="{% for i in plot_no  %}{{i.phase}}{% endfor %}" readonly > {% endcomment %}
+                                    <select class="form-select" aria-label="Default select example" name="phase" required>
+                                        <option selected>Select Category</option>
+                                        {% for i in phse  %}
+                                        <option value="{{i.id}}">{{i.phase}}</option>
+                
+                                           {% comment %} <option value="{{i.id}}">{{i.category_name}}</option> {% endcomment %}
+                
+                                        {% endfor %}
+                                      </select>
+                                </div>
+                                {% comment %} <div class="col-xl-3 col-xxl-6 col-md-6">
+                                    <label class="form-label">Discount</label>
+                                    <input type="number" class="form-control" placeholder="Enter " id="discount" name="discount" value="{% for i in plot_no %}{{i.discount}}{% endfor %}" >
+                                </div> {% endcomment %}
+                                
+                               
+                                
+                                
+                            </div>
+                            <div class="col-xl-3 col-xxl-6 col-md-6">
+                                <button type="submit" class="btn btn-primary">UPDATE</button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+    {% endblock %}

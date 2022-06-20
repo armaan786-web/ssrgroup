@@ -1,0 +1,83 @@
+{% extends "base1.html" %}
+{% block content %}
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Form</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Add Customer</a></li>
+            </ol>
+        </div>
+        <h4 class="text-center mb-4"> Username : {{ customer.owner.username }} |  #USER ID : {{ staff.admin.user_id }}</h4>
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Add Customer</h4>
+                    </div>
+                    {% include 'includes/messages.html' %}
+                    <div class= "btn btn-primary">
+
+                    </div>
+                    <div class="card-body">
+                        
+                           
+                            <form action="" method="POST">
+                                <div class="row form-material">
+                                {% csrf_token %}
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">Customer Id</label>
+                                    <input class="form-control" id="cust_id" name="cust_id" value="{{ customer.customer_id}}"  required>
+                                    <input class="form-control" id="cust_id" name="cust_id" value="{{ customer.owner.id}}"  required>
+                                </div>
+
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb -3">
+                                    <label class="form-label">Username</label>
+                                    <input type="text" class="form-control" name = "name" id="name" value="{{customer.username}}"  required >
+                                </div>
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">Father's Name</label>
+                                    <input type="text" class="form-control" id="father_name" name="father_name"  required >
+                                </div>
+                                <div class="col-xl-3 col-xxl-6 col-md-6">
+                                    <label class="form-label">Mobile No.</label>
+                                    <!-- <input id="pin" type="password" inputmode="numeric" minlength="4"maxlength="8" size="8">  -->
+                                    <input type="number" class="form-control" id="mob_no" name="mob_no"  required>
+                                </div>
+                                <div class="col-xl-3 col-xxl-6 col-md-6">
+                                    <label class="form-label">Email ID</label>
+                                    <!-- <input id="pin" type="password" inputmode="numeric" minlength="4"maxlength="8" size="8">  -->
+                                    <input type="Email" class="form-control" id="mail" name="mail"  required>
+                                </div>
+                                <div class="col-xl-3 col-xxl-6 col-md-6">
+                                    <label class="form-label">Address</label>
+                                    <!-- <input id="pin" type="password" inputmode="numeric" minlength="4"maxlength="8" size="8">  -->
+                                    <input type="text" class="form-control" id="addresss" name="addresss"  required>
+                                </div>
+                                <div class="col-xl-3 col-xxl-6 col-md-6">
+                                    <label class="form-label">Password</label>
+                                    <!-- <input id="pin" type="password" inputmode="numeric" minlength="4"maxlength="8" size="8">  -->
+                                    <input type="password" class="form-control" id="password" name="password"  required>
+                                </div>
+                               
+                               
+                                
+                                
+                            </div>
+                            <div class="col-xl-3 col-xxl-6 col-md-6">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                                
+                            </form>
+                            
+                       
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+    {% endblock %}

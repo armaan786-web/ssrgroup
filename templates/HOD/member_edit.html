@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="admin, dashboard">
+	<meta name="author" content="DexignZone">
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% comment %} <meta name="description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template">
+	<meta property="og:title" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template">
+	<meta property="og:description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template">
+	<meta property="og:image" content="https://omah.dexignzone.com/xhtml/social-image.png"> {% endcomment %}
+	<meta name="format-detection" content="telephone=no">
+    <title>SSR - Property Dashboard</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images\favicon.png">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="h-100">
+    
+    <div class="authincation h-100">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100 align-items-center">
+                <div class="col-md-6">
+                    <div class="authincation-content">
+                        <div class="row no-gutters">
+                            <div class="col-xl-12">
+                                <div class="auth-form">
+									<div class="text-center mb-3">
+										<a href="index.html"><img src="{% static 'images/lat.png' %}" alt=""></a>
+									</div>
+                                    
+                                    <h4 class="text-center mb-4"> Username : {{ staff.admin.username }} |  #USER ID : {{ staff.admin.user_id }}</h4>
+                                   
+                                    {% include 'includes/messages.html' %}
+                                    
+                                    <form action="{% url 'update_member' %}" method = "POST">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <label class="mb-1"><strong>User Name</strong></label>
+                                            <input type="text" class="form-control" placeholder="It must be unique" name = "username" value="{{ staff.admin.username }}" required>
+                                            
+                                         <input type="text" class="form-control" name = "staff_id" value = "{{ staff.admin.id }}" hidden>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="mb-1"><strong>First Name</strong></label>
+                                            <input type="text" class="form-control" placeholder="First Name" name = "first_name" value = "{{ staff.admin.first_name}}" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="mb-1"><strong>Last Name</strong></label>
+                                            <input type="text" class="form-control" placeholder="Last Name" name = "lname" value="{{ staff.admin.last_name}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="mb-1"><strong>Email</strong></label>
+                                            <input type="email" class="form-control" placeholder="hello@example.com" name = "email" value="{{ staff.admin.email}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="mb-1"><strong>Mobile No</strong></label>
+                                            <input type="number" class="form-control" placeholder="Enter a mobile number" name = "mob" value="{{ staff.mobile_no}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="mb-1"><strong>Reference Id</strong></label>
+                                            <input type="text" class="form-control" placeholder="hello@example.com" name = "reference_id" value="{{ staff.reference_id}}" readonly>
+                                        </div>
+                                        
+                                        {% comment %} <div class="form-group">
+                                            <label class="mb-1"><strong>Password</strong></label>
+                                            <input type="text" class="form-control" placeholder="hello@example.com" name = "password" value="{% for i in member %}{{i.password}}{% endfor %}">
+                                        </div> {% endcomment %}
+                                        
+                                        
+                                        {% comment %} <div class="form-group">
+                                            <label class="mb-1"><strong>Percentage </strong></label>
+                                            <input type="text" class="form-control" Placeholder="Autodetect" name="percentage" value="{{code.user_id}}" readonly>
+                                        </div> {% endcomment %}
+                                        <div class="cod-md-12 mb-3">
+                                            <label class="form-label">Percentage</label>
+                                            {% comment %} <input type="text" id="plot_number" class="form-control" name="plot_number"  > {% endcomment %}
+                                            <select type='number' class="form-select" aria-label="Default select example" name="percentage" ,required>
+                                                
+                                                {% comment %} <option Select></option> {% endcomment %}
+                                                <option value="20">20</option>
+                                                <option value="19">19</option>
+                                                <option value="18">18</option>
+                                                <option value="17">17</option>
+                                                <option value="16">16</option>
+                                                <option value="15">15</option>
+                                                <option value="14">14</option>
+                                                <option value="13">13</option>
+                                                <option value="12">12</option>
+                                                <option value="11">11</option>
+                                                <option value="10">10</option>
+                                                <option value="9">9</option>
+                                                <option value="8">8</option>
+                                                <option value="7">7</option>
+                                                <option value="6">6</option>
+                                                <option value="5">5</option>
+                                                <option value="4">4</option>
+                                                <option value="3">3</option>
+                                                <option value="2">2</option>
+                                                <option value="1">1</option>
+                                                {% comment %} <option value=""></option> {% endcomment %}
+                                                {% comment %} {% for i in rank %}
+                                                <option value="{{i.rank}}">{{i.rank}}</option>
+                                                {% endfor %}                                  {% endcomment %}
+                                                
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="mb-1"><strong>Password</strong></label>
+                                            <input type="password" class="form-control" placeholder="Fill only If you went To Change Password" name = "change_psw" value="">
+                                        </div>
+                                        {% comment %} <div class="form-row d-flex justify-content-between mt-4 mb-2">
+                                            <div class="form-group
+                                               <div class="form-check custom-checkbox ms-1">
+													<input type="checkbox" class="form-check-input" id="basic_checkbox_1">
+													<label class="custom-control-label" for="basic_checkbox_1">Remember my preference</label>
+												</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <a href="page-forgot-password.html">Forgot Password?</a>
+                                            </div>
+                                        </div> {% endcomment %}
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-primary btn-block">Update</button>
+                                        </div>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--************
+        Scripts
+    *************-->
+    <!-- Required vendors -->
+    <script src="{% static 'vendor/global/global.min.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'js/custom.min.js' %}"></script>
+    <script src="{% static 'js/deznav-init.js' %}"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+
+</body>
+
+</html>

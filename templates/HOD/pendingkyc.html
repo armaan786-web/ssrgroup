@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="input-group">
+    <div class="form-outline">
+      <input type="search" id="form1" class="form-control" />
+      <label class="form-label" for="form1">Search</label>
+    </div>
+    <button type="button" class="btn btn-primary">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Pending Kyc</h4>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+            </div>
+            
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Sr.No.</th>
+                            <th scope="col">User Id</th>
+                            <th scope="col">Account Name</th>
+                            <th scope="col">Account No.</th>
+                            <th scope="col">IFSC No.</th>
+                            <th scope="col">Pancard No. </th>
+                            <th scope="col">Action</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>1231</td>
+                                  <td>Ram Gopal</td>
+                                  <td>03456765642</td>
+                                  <td>Punb010176</td>
+                                  <td>ARPANHG</td>
+                                  <td>#</td>
+                             
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>1231</td>
+                                    <td>Ram Gopal</td>
+                                    <td>03456765642</td>
+                                    <td>Punb010176</td>
+                                    <td>ARPANHG</td>
+                                    <td>#</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                  <td>1231</td>
+                                  <td>Ram Gopal</td>
+                                  <td>03456765642</td>
+                                  <td>Punb010176</td>
+                                  <td>ARPANHG</td>
+                                  <td>#</td>
+                                  </tr>
+                              </tbody>
+                            
+
+                          
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+    
+{% endblock  %}

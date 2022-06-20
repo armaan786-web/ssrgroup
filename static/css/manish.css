@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap');
+.container
+{
+    position: relative;
+    background: rgba(238,238,224);
+    height: auto; 
+    height: 1200px;
+}
+.header
+{
+    text-align: center;
+}
+.header-bottom
+{
+    position: relative;
+    border: 3px solid black;
+    text-align: center;
+}
+.detail
+{
+    text-align: center;
+}
+.rep
+{
+    float: left;
+}
+.date
+{
+    position: relative;
+    height: auto;
+    float: left;
+    width: 50%;
+}
+.date1
+{
+    position: relative;
+    height: auto;
+    float: left;
+    width: 50%;
+    text-align: right;
+}
+.customer
+{
+    text-align: center;
+}
+label1
+{
+    font-size: 20px;
+    
+}
+.number1
+{
+    border: 0;
+    outline: none;
+    border-bottom: 2px dotted black;
+    background: rgba(238,238,224);
+    font-size: 15px;
+    margin: 3%;
+}
+.number3
+{
+    border: 0;
+    outline: none;
+    border-bottom: 2px dotted black;
+    background: rgba(238,238,224);
+    font-size: 15px;
+    margin: 3%;
+}
+.number4
+{
+    border: 0;
+    outline: none;
+    border-bottom: 2px dotted black;
+    background: rgba(238,238,224);
+    width: 10%;
+    font-size: 15px;
+    margin-left: 3%;
+}
+.number5
+{
+    border: 0;
+    outline: none;
+    border-bottom: 2px dotted black;
+    background: rgba(238,238,224);
+    width: 10%;
+    font-size: 15px;
+    margin: 3%;
+
+}
+label2
+{
+    font-size: 20px;
+    margin-right: 3%;
+}
+.case
+{
+    text-align: right;
+}
+label3
+{
+    font-size: 15px;
+    border-bottom: 1px solid black;
+}

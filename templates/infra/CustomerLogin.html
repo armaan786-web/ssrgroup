@@ -1,0 +1,203 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"><meta name="description"><title>
+	WELCOME TO SSR PROPERTY | CustomerLogin
+</title><link rel="icon" href="{% static 'infra/admin/favicon.ico' %}" type="image/x-icon"><link rel="stylesheet" href="{% static 'infra/admin/assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="{% static 'infra/admin/assets/css/main.css' %}"><link rel="stylesheet" href="{% static 'infra/admin/assets/css/color_skins.css' %}"><link href="css2?family=Jost:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"><link href="css2-1?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="{% static 'infra/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.0/sweetalert.min.js">
+    <style>
+        body {
+            background: url({% static 'infra/images/slider-2.jpg' %});
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Jost;
+        }
+
+        .form-controls {
+            display: block;
+            width: 100%;
+            height: 44px;
+            padding: 6px 12px;
+            font-size: 15px;
+            line-height: 1.42857143;
+            color: #111650;
+            background: none !important;
+            background: #fff !important;
+            border: 2px solid #b9c0ca;
+            border-radius: 5px;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+
+        .form-group label.control-label {
+            font-size: 14px;
+            line-height: 1.0714285718;
+            color: #111;
+            font-weight: 600;
+            margin: 0;
+            margin-bottom: 9px;
+            margin-top: 9px;
+            text-transform: capitalize;
+        }
+
+        a {
+            color: #86b040;
+        }
+
+        .form-group {
+            padding-bottom: 1px;
+            margin: 0;
+        }
+
+        .card .body {
+            font-weight: 400;
+        }
+
+
+
+
+        .card {
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+            border-radius: 8px;
+            background: #ffffffcf;
+            min-height: 50px;
+            position: relative;
+            border: none;
+        }
+
+            .card .header h2 {
+                font-weight: 600;
+                color: #12174f;
+            }
+
+
+        .log {
+            margin-top: 50px;
+        }
+
+
+
+
+        .text-left.textstyle {
+            font-size: 14px !important;
+            color: #7d7d7d;
+        }
+
+
+        table#rbllogin > tbody > tr > td > label {
+            text-align: left !important;
+        }
+
+        #lbtnLogin {
+            padding: 10px;
+            box-shadow: none;
+            font-weight: 600;
+            border-radius: 4px;
+            background: #ff6e00 !important;
+        }
+
+        .btn:not(.btn-link):not(.btn-circle) i {
+            font-size: 14px;
+            position: relative;
+            top: 0px;
+        }
+
+        .gmail {
+            background: #e34133;
+            color: #fff;
+        }
+
+        .Facebook {
+            background: #1773ea;
+            color: #fff;
+        }
+
+        .card {
+            max-width: 350px !important;
+            margin: 0 auto;
+            border-radius: 11px !important;
+            overflow: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-1.12.4.min.js">
+    {% comment %} <script src="js/jquery-1.12.4.min.js"></script> {% endcomment %}
+</head>
+<body class="theme-orange">
+    <form name="form1" method="post" action="./CustomerLogin.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMzcwODg0MzNkZK9Jz/kqScevJEI/12LqDLrAist0">
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="199058E8">
+        <!-- Page Loader -->
+        <div class="container-fluid">
+            <!-- Vertical Layout -->
+            <div class="row ">
+                <div class="offset-md-8 col-md-4 log slideDown ">
+                    <div class="card">
+                        <a href="index.html" style="background: #fff; padding-top: 10px;">
+                            
+                            <img src="{% static 'images/lat.png' %}" style="max-width: 90px; margin-bottom: 14px !important; margin: 0 auto; margin-bottom: 0px; display: block;">
+                        </a>
+                        <div class="header">
+                            <h2 class="panel__tit mt-2">Welcome Back !</h2>
+                        </div>
+                        <div class="body">
+                            <div class="form-horizontal" action="">
+                                <div class="form-group">
+                                    <label class="control-label " for="email">Enter Plot No. *</label>
+                                    <input name="txtplotno" type="text" id="txtplotno" placeholder="Enter Plot Number" class="form-controls">
+                                </div>
+                                <div id="div_mob">
+                                    <div class="form-group">
+                                        <label class="control-label " for="email">Mobile No. *</label>
+                                        <input name="txtmob" type="text" maxlength="10" readonly="readonly" id="txtmob" placeholder="Enter Mobile Number" minlength="10" class="form-controls">
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <a id="SendOTP" class="btn btn-raised btn-primary btn-sm m-t-15 waves-effect" href="javascript:__doPostBack('SendOTP','')">Send OTP</a>
+                                        <span id="Label1"></span>
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <a id="" class="btn" href="{% url 'home' %}">Go to Home</a>
+                                        <span id="Label1"></span>
+                                    </div>
+                                </div>
+
+                                
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- Jquery Core Js -->
+    <script src="{% static 'infra/admin/assets/bundles/libscripts.bundle.js' %}"></script>
+    <!-- Lib Scripts Plugin Js -->
+    <script src="{% static 'infra/admin/assets/bundles/vendorscripts.bundle.js' %}"></script>
+    <!-- Lib Scripts Plugin Js -->
+    <script src="{% static 'infra/admin/assets/bundles/mainscripts.bundle.js' %}"></script>
+    <!-- Custom Js -->
+
+    
+    {% comment %} <script src="js/notify.js"></script> {% endcomment %}
+    {% comment %} <script src="{% static 'infra/js/sweetalert.min.js' %}"></script> {% endcomment %}
+    <script type="text/javascript">
+        function validateLogin() {
+            var plotname = document.getElementById("txtplotno");
+
+            if (plotname.value == "") {
+                plotname.focus();
+                $("#txtUserId").notify("Please Enter Plot No.", { position: "bottom" });
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

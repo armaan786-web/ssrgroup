@@ -1,0 +1,165 @@
+{% load static %}
+<link href="{% static 'cssnew/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'cssnew/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'cssnew/aos.css' %}" rel="stylesheet">
+        <link href="{% static 'cssnew/style.css' %}" rel="stylesheet">
+        <link href="{% static 'assetsnew/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200,400,500,600,700,800,900&display=swap');
+
+        .home {
+            position: relative;
+            margin-top: 5%;
+        }
+
+        p1 {
+            font-size: 20px;
+        }
+
+        p2 {
+            font-size: 19px;
+            color: black;
+        }
+
+        h2 {
+            color: black;
+            text-shadow: 1px 1px black;
+
+        }
+
+        p3 {
+            color: orange;
+        }
+
+        .hash {
+            position: relative;
+        }
+
+        p4 {
+            font-size: 19px;
+            color: black;
+            text-shadow: 1px 1px black;
+        }
+
+        h4 {
+            color: black;
+            text-shadow: 1px 1px black;
+        }
+
+        .card {
+            position: relative;
+            height: 750px;
+            border: 1px solid black;
+        }
+
+        .pick {
+            position: relative;
+            height: 400px;
+            
+        }
+
+        .text {
+            position: relative;
+            height: 350px;
+             
+            text-align: center;
+        }
+
+        p5 {
+            font-size: 25px;
+            color: orange;
+        }
+
+        .btn {
+            border: 2px solid;
+        }
+        .btn:hover
+        {
+            background: orange;
+            color: white;
+        }
+        .box
+        {
+            position: relative;
+            margin-top: 5%;
+        }
+        
+        
+        img-fluid{
+            width="10%"
+        }
+        .mobile-nav{
+            background:black;
+        }
+
+    </style>
+
+
+
+  <div class="container-fluid d-flex bg-dark">
+    <h1 class="logo mr-auto text-black text-white">SSR Group</h1>
+    <nav class="nav-menu d-none d-lg-block">
+        <ul>
+        <!-- this code will be change in margin of text-->
+            <li style="top: 10px;"><a class="text-white" href="{% url 'home' %}">Home</a></li>
+            <li style="top: 10px;"><a class="text-white" href="{% url 'about' %}">About</a></li>
+            <li style="top: 10px;"><a class="text-white" href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'login' %}" class="btn btn-primary btn-lg text-white" tabindex="-1" role="button">Login</a></li>
+            <li><a href="#" class="btn btn-primary btn-lg text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop" tabindex="-1" role="button">Customer Login</a></li>
+             <!-- Button trigger modal -->
+                
+            <!-- Modal -->
+            <form action="{% url 'doCustomerLogin' %}" method="POST">
+                {% csrf_token %}
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title" id="staticBackdropLabel"><em>Customer Login</em></h1>
+                    
+                    {% comment %} <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> {% endcomment %}
+                    </div>
+                    {% include 'includes/messages.html' %}
+                    <div class="modal-body">
+                        <div class="form">
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="typeEmailX-2">Email</label>
+                            <input type="email" id="typeEmailX-2" class="form-control form-control-lg" name='email' required />
+                            
+                        </div>
+            
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="typePasswordX-2">Password</label>
+                            <input type="password" id="typePasswordX-2" class="form-control form-control-lg" name="password" required />
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </form>
+
+
+            
+        </ul>
+    </nav>
+</div>
+
+
+
+        <script src="{% static 'jsnew/jquery.min.js' %}"></script>
+        <script src="{% static 'jsnew/jquery.waypoints.min.js' %}"></script>
+        <script src="{% static 'jsnew/counterup.min.js' %}"></script>
+        <script src="{% static 'jsnew/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'jsnew/aos.js' %}"></script>
+        <script src="{% static 'jsnew/main.js' %}"></script>

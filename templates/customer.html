@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Customer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://kendo.cdn.telerik.com/2017.2.621/js/kendo.all.min.js"></script>
+    
+</head>
+
+<body>
+
+    <div class="container"><br><br><br><br>
+        <h1 style="text-align: center;font-weight: bold;font-size: 45px;text-shadow: 2px 2px 2px gray;">Customer Details</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+        <div class="row">
+            <div class="col-md-2">
+                <label>Customer ID :</label>
+                <input class="form-control" type="text" placeholder="search..." name="searched">
+            </div>
+            <div class="col-md-2">
+                <label>Plot No :</label>
+                <input class="form-control" type="text" placeholder="search..." name="searched2">
+            </div>
+            <div class="col-md-7">
+                <br>
+                <button class="btn btn-danger">Search</button><br><br>
+            </div>
+            
+            {% comment %} <div class="col-md-3">
+                <input class="form-control" id="myInput" type="text" placeholder="Search.."><br>
+            </div> {% endcomment %}
+           
+        </div>
+    </form>
+            {% if searched and searched2 %} 
+            <center><h1>you searched for Customer Id :- {{searched}}, Plot No:- {{searched2}}</h1></center>
+            
+        
+        <table class="table table-bordered table-striped"    id="tblinfo">
+              
+            <thead>
+                <tr style="background: lightgray;">
+                    <th>Name</th>
+                    <th>Customer ID</th>
+                    <th>Plot No</th>
+                    <th>Mobile No</th>
+                    <th>Total Amount</th>
+                    <th>Installment Amount</th>
+                    <th>Remaining Amount</th>
+                    <th>Payment Mode</th>
+                    <th>Remarks</th>
+                    <th>Reference ID</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+            {% for venues in venues %}
+                <tr style="background: rgba(238,238,224);">
+                    <td>{{venues.name}}</td>
+                    <td>{{venues.plot_number}}</td>
+                    <td>{{venues.user_id}}</td>
+                    <td>{{venues.mobile_no}}</td>
+                    <td>{{venues.Payable_amout}}</td>
+                    <td>{{venues.payment_amount}}</td>
+                    <td>{{venues.remaining_amount}}</td>
+                    <td>{{venues.payment_mode}}</td>
+                    <td>{{venues.remarks}}</td>
+                    <td>{{venues.ref_id}}</td>
+                    <td>{{venues.joinig_date}}</td>
+                    
+                   
+                </tr>
+
+                
+               {% endfor %}
+                {% else %}
+           
+            {% endif %}
+            </tbody>
+        </table>
+        {% if searched %}
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-danger" onclick="pdfDownload('Demo')">PDF</button>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+
+
+    <script type="text/javascript">
+        function pdfDownload(filename) {
+            kendo.drawing.drawDOM($("#tblinfo"))
+                .then(function (group) {
+                    return kendo.drawing.exportPDF(
+                        group, {
+                        paperSize: "auto",
+                        margin: {
+                            left: "1cm",
+                            right: "1cm",
+                            top: "1cm",
+                            bottom: "1cm"
+                        }
+                    });
+                })
+                .done(function (data) {
+                    kendo.saveAs({
+                        dataURI: data,
+                        fileName: filename
+                    })
+                })
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

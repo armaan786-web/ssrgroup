@@ -1,0 +1,89 @@
+{% extends "base1.html" %}
+{% block content %}
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Form</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Add Plot</a></li>
+            </ol>
+        </div>
+        
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Add Plot</h4>
+                    </div>
+                    {% include 'includes/messages.html' %}
+                    <div class="btn btn-primary">
+
+                    </div>
+                    
+                       
+                    <div class="card-body">
+                        <form action="{% url 'addplot' %}" method="POST">
+                            {% csrf_token %}
+                            <div class="row form-material">
+                           
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">Plot No.</label>
+                                    <input type= "text" class="form-control" id="plotno" placeholder="Enter Plot NO." name="plot_no">
+                                </div>
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb -3">
+                                    <label class="form-label">Plot Size</label>
+                                    <input type="number" class="form-control" placeholder="Type in sq yard"id="plotsize" name="plot_size" >
+                                </div>
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">Plot Rate</label>
+                                    <input type="number" class="form-control" placeholder="Enter here" id="plot_rate" name="plot_rate"  >
+                                </div>
+                                <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">Phase</label>
+                                    <select class="form-select" aria-label="Default select example" name="phase_id" required>
+                                        <option selected>Select Phase</option>
+                                        {% for i in phse  %}
+                
+                                           <option value="{{i.id}}">{{i.phase}}</option>
+                
+                                        {% endfor %}
+                                        
+                                      </select>
+                                </div>
+                                {% comment %} <div class="col-xl-3 col-xxl-6 col-md-6 mb-3">
+                                    <label class="form-label">PLC Rate</label>
+                                    <input type="number" class="form-control" placeholder="In % only" id="plcrate" name="plc_rate" >
+                                </div>
+                                <div class="col-xl-3 col-xxl-6 col-md-6">
+                                    <label class="form-label">PLC</label>
+                                    <input type="number" class="form-control" placeholder="Type here" id="plc"  name="plc" >
+                                </div> {% endcomment %}
+                               
+                                {% comment %} <div class="col-xl-3 col-xxl-6 col-md-6">
+                                    <label class="form-label">Discount</label>
+                                    <input type="number" class="form-control" placeholder="Enter " id="discount" name="discount" >
+                                </div> {% endcomment %}
+                                
+                                <div class="col-xl-3 col-xxl-6 col-md-6">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                                
+                                
+                            </div>
+                        </form>
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function myfunc(){
+        alert(document.getElementById("#plot_rate").value)
+    }
+</script>
+    {% endblock %}

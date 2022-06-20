@@ -1,0 +1,125 @@
+        <!--**********************************
+            Sidebar start
+       ***********************************-->
+       {% load static %}
+       <div class="deznav">
+            
+        <div class="deznav-scroll">
+            <ul class="metismenu" id="menu">
+                    <li>
+                    
+                        </li>
+                        <li>
+                            <a class="has-arrow ai-icon" href="{% url 'Agent_Home'%}"><i class="flaticon-dashboard-1"></i>Dashboard  <span class="sr-only">(current)</span></a>
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-app"></i>
+                        <span class="nav-text">Customer</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{% url 'agentadd_user' %}">Create Customer </a></li>
+                            <li><a href="{% url 'customer_view1' %}">View Customer Details</a></li>
+                          
+                        </ul>
+                     </li>
+                    
+                {% comment %} <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-app"></i>
+                        <span class="nav-text">My Income Details</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="{% url 'level_income' %}">Level Income</a></li>
+                        <li><a href="{% url 'income_details' %}">Income Details</a></li>
+                        
+                            <ul aria-expanded="false">
+                               
+                            </ul>
+                        </li>
+                        
+                        
+                            
+                        </li>
+                    </ul>
+                </li> {% endcomment %}
+                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    
+                        <i class="flaticon-form-1"></i>
+                        <span class="nav-text">Plot Details</span>
+                    </a>
+                    <ul aria-expanded="false">
+                       
+                        <li><a href="{% url 'Agent_bookplot' %}">Book Plot</a></li>
+                        <li><a href="{% url 'agent_approvedplot' %}">Approved Plot</a></li>
+                        
+                        {% comment %} <li><a href="{% url 'installment_detail' %}">Installment Details</a></li> {% endcomment %}
+                                                 
+                    </ul>
+                </li>
+
+               
+                <li>
+                    <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-app"></i>
+                    <span class="nav-text">Installment Details</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="{% url 'add_installment1' %}"> Installment</a></li>
+                        {% comment %} <li><a href="{% url 'Sec_Installment' %}">2nd Installment</a></li> {% endcomment %}
+                        <li><a href="{% url 'view_installment1' %}">VIEW Installment</a></li>
+                        {% comment %} <li><a href="{% url 'tokenslip' %}">Token Slip</a></li> {% endcomment %}
+                        {% comment %} <li><a href="{% url 'approvedkyc' %}">All Kyc Details</a></li> {% endcomment %}
+                        {% comment %} <li><a href="{% url 'bookplot' %}">Book Plot</a></li> {% endcomment %}
+                       
+                    </ul>
+                 </li>    
+             
+            </li>
+                    
+                </li>
+                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-form-1"></i>
+                    <span class="nav-text">My Wallet</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{% url 'wallet_history' %}">Wallet History</a></li>
+                    {% comment %} <li><a href="{% url 'Agent_Home' %}">Withdrawal Report</a></li> {% endcomment %}
+                   
+                  
+                </ul>
+            </li>
+
+            {% comment %} <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                   <img src="{% static 'dashboard_icon/6.png' %}" class="img-fluid" alt="..."><br>
+                <span class="nav-text">General Activity</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{% url 'view_agentmemberlist' %}"> Member List</a></li>
+                   
+                   
+                </ul>
+             </li> {% endcomment %}
+            <li>
+                <a class="has-arrow ai-icon" href="{% url 'get_in_touch'%}"><i class="flaticon-money"></i>Get in Touch  <span class="sr-only">(current)</span></a>
+            </a>
+            
+        </li>
+                <li>
+                    <a class="has-arrow ai-icon" href="{% url 'agent_profile'%}"><i class="flaticon-money"></i>Setting  <span class="sr-only">(current)</span></a>
+                </a>
+                
+            </li>
+                 
+            
+            {% comment %} <div class="copyright">
+                <p><strong>Omah Dashboard</strong> © 2022 All Rights Reserved</p>
+                <p>by DexignZone</p>
+            </div> {% endcomment %}
+        </div>
+    </div>
+    <!--**********************************
+        Sidebar end
+    ***********************************-->

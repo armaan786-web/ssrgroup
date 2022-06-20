@@ -1,0 +1,767 @@
+﻿{% load static %}
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Links of CSS files -->
+        {% comment %} <link rel="stylesheet" href="{% static 'assets\css\bootstrap.min.css' %}">
+        <link rel="stylesheet" href="assets\css\animate.min.css">
+        <link rel="stylesheet" href="assets\css\meanmenu.css">
+        <link rel="stylesheet" href="assets\css\boxicons.min.css">
+        <link rel="stylesheet" href="assets\css\flaticon.css">
+        <link rel="stylesheet" href="assets\css\odometer.min.css">
+        <link rel="stylesheet" href="assets\css\nice-select.min.css">
+        <link rel="stylesheet" href="assets\css\owl.carousel.min.css">
+        <link rel="stylesheet" href="assets\css\owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets\css\magnific-popup.min.css">
+        <link rel="stylesheet" href="assets\css\fancybox.min.css">
+        <link rel="stylesheet" href="assets\css\style.css">
+		<link rel="stylesheet" href="assets\css\responsive.css"> {% endcomment %}
+        <link rel="stylesheet" href="{% static 'assets\css\bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\meanmenu.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\boxicons.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\flaticon.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\odometer.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\nice-select.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\owl.theme.default.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\magnific-popup.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\fancybox.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\style.css' %}">
+		<link rel="stylesheet" href="{% static 'assets\css\responsive.css' %}">
+		
+		<title>Welcome to SSR Home Zone</title>
+
+        <link rel="icon" type="image/png" href="assets\images\favicon.png">
+    </head>
+
+    <body>
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+
+        <!-- Start Navbar Area -->
+        {% include 'homepage/base.html' %}
+        <!-- End Navbar Area -->
+        <!-- Start Page Banner Area -->
+        <div class="page-banner-area">
+            <div class="container">
+                <div class="page-banner-content wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="2000ms">
+                    <h2>About Us</h2>
+
+                    <ul>
+                        <li>
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li>Pages</li>
+                        <li>About Us</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="page-banner-image wow fadeInRight" data-wow-delay="300ms" data-wow-duration="2000ms">
+                <img src="{% static 'assets\images\page-banner.png' %}" alt="image">
+            </div>
+        </div>
+        <!-- End Page Banner Area -->
+
+        <!-- Start About Area -->
+        <div class="about-area ptb-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-image">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 col-sm-6 col-md-6 col-6">
+                                    <div class="image">
+                                        <img src="{% static 'assets\images\about\about-1.jpg' %}" alt="image">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-sm-6 col-md-6 col-6">
+                                    <div class="image">
+                                        <img src="{% static 'assets\images\about\about-2.jpg' %}" alt="image">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-sm-6 col-md-6 col-6">
+                                    <div class="image">
+                                        <img src="{% static 'assets\images\about\about-3.jpg' %}" alt="image">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-sm-6 col-md-6 col-6">
+                                    <div class="image">
+                                        <img src="{% static 'assets\images\about\about-4.jpg' %}" alt="image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-content">
+                            <h3>Our Motive is to Provide Best for All and Fulfill their Desire</h3>
+                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
+
+                            <div class="about-quote">
+                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis. Proin gravida nibh vel velit auctor aliquet.</p>
+                                <span>Founder & CEO - <b>T Makeng</b></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End About Area -->
+
+        <!-- Start Facilities Area -->
+        <div class="facilities-area bg-f7fefe pt-100 pb-70">
+            <div class="container">
+                <div class="section-title">
+                    <h3>Facilities of Our Fido</h3>
+                    <p>Proin gravida nibh vel velit auctor aliquet aenean sollicitudin lorem quis bibendum auctor nisi elit consequat ipsum nec sagittis sem nibh id elit.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-facilities">
+                            <div class="image">
+                                <img src="{% static 'assets\images\facilities\facilities-1.png' %}" alt="image">
+                            </div>
+
+                            <h3>No Revenue Loss</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-facilities">
+                            <div class="image">
+                                <img src="{% static 'assets\images\facilities\facilities-2.png' %}" alt="image">
+                            </div>
+                            
+                            <h3>6 Month Free Service</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-facilities">
+                            <div class="image">
+                                <img src="{% static 'assets\images\facilities\facilities-3.png' %}" alt="image">
+                            </div>
+                            
+                            <h3>24/7 Service</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-facilities">
+                            <div class="image">
+                                <img src="{% static 'assets\images\facilities\facilities-4.png' %}" alt="image">
+                            </div>
+                            
+                            <h3>Low Price</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-facilities">
+                            <div class="image">
+                                <img src="{% static 'assets\images\facilities\facilities-5.png' %}" alt="image">
+                            </div>
+                            
+                            <h3>Value Relationship</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-facilities">
+                            <div class="image">
+                                <img src="{% static 'assets\images\facilities\facilities-6.png' %}" alt="image">
+                            </div>
+                            
+                            <h3>Easy Installment</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Facilities Area -->
+
+        <!-- Start Fun Facts Area -->
+        <div class="fun-facts-area pt-100 pb-70">
+            <div class="container">
+                <div class="section-title">
+                    <h3>Our Achievement</h3>
+                    <p>Proin gravida nibh vel velit auctor aliquet aenean sollicitudin lorem quis bibendum auctor nisi elit consequat ipsum nec sagittis sem nibh id elit.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-fun-fact">
+                            <h3>
+                                <span class="odometer" data-count="10245">00</span>
+                                <span class="sign-icon">+</span>
+                            </h3>
+                            <p>Completed Property</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-fun-fact">
+                            <h3>
+                                <span class="odometer" data-count="24245">00</span>
+                                <span class="sign-icon">+</span>
+                            </h3>
+                            <p>Apartment Rent</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-fun-fact">
+                            <h3>
+                                <span class="odometer" data-count="13248">00</span>
+                                <span class="sign-icon">+</span>
+                            </h3>
+                            <p>Property Sales</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-fun-fact">
+                            <h3>
+                                <span class="odometer" data-count="90245">00</span>
+                                <span class="sign-icon">+</span>
+                            </h3>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Fun Facts Area -->
+
+        <!-- Start Agents Area -->
+        <div class="agents-area ptb-100">
+            <div class="container">
+                <div class="section-title">
+                    <h3>Explore Feature Agents</h3>
+                    <p>Proin gravida nibh vel velit auctor aliquet aenean sollicitudin lorem quis bibendum auctor nisi elit consequat ipsum nec sagittis sem nibh id elit.</p>
+                </div>
+
+                <div class="agents-slides owl-carousel owl-theme">
+                    <div class="agents-item">
+                        <div class="agents-image">
+                            <a href="property-details.html"><img src="{% static 'assets\images\agents\agents-1.jpg' %}" alt="image"></a>
+
+                            <ul class="social">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/?lang=en" target="_blank">
+                                        <i class='bx bxl-twitter'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class='bx bxl-instagram-alt'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/" target="_blank">
+                                        <i class='bx bxl-pinterest-alt'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="agents-content">
+                            <span>64 1st Avenue, High Street, NZ 1002</span>
+                            <h3>
+                                <a href="property-details.html">Thomas Jakson</a>
+                            </h3>
+                            <p>1127 Properties</p>
+
+                            <ul class="rating-list">
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li class="color-gray"><i class='bx bxs-star'></i></li>
+                                <li>Average</li>
+                            </ul>
+
+                            <div class="message-icon">
+                                <a href="contact.html" target="_blank">
+                                    <i class='bx bx-envelope'></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="agents-bottom-content">
+                            <p>
+                                <i class='bx bxs-phone'></i>
+                                <a href="tel:000123456789">+000 123 456 789</a>
+                            </p>
+
+                            <div class="agents-btn">
+                                <a href="property-details.html" class="default-btn">KNOW DETAILS <span></span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agents-item">
+                        <div class="agents-image">
+                            <a href="property-details.html"><img src="{% static 'assets\images\agents\agents-2.jpg' %}" alt="image"></a>
+
+                            <ul class="social">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/?lang=en" target="_blank">
+                                        <i class='bx bxl-twitter'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class='bx bxl-instagram-alt'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/" target="_blank">
+                                        <i class='bx bxl-pinterest-alt'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="agents-content">
+                            <span>64 1st Avenue, High Street, NZ 1002</span>
+                            <h3>
+                                <a href="property-details.html">Sinthiya Anvi</a>
+                            </h3>
+                            <p>1128 Properties</p>
+
+                            <ul class="rating-list">
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li class="color-gray"><i class='bx bxs-star'></i></li>
+                                <li>Average</li>
+                            </ul>
+
+                            <div class="message-icon">
+                                <a href="contact.html" target="_blank">
+                                    <i class='bx bx-envelope'></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="agents-bottom-content">
+                            <p>
+                                <i class='bx bxs-phone'></i>
+                                <a href="tel:000123456789">+000 123 456 789</a>
+                            </p>
+
+                            <div class="agents-btn">
+                                <a href="property-details.html" class="default-btn">KNOW DETAILS <span></span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agents-item">
+                        <div class="agents-image">
+                            <a href="property-details.html"><img src="{% static 'assets\images\agents\agents-3.jpg' %}" alt="image"></a>
+
+                            <ul class="social">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/?lang=en" target="_blank">
+                                        <i class='bx bxl-twitter'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class='bx bxl-instagram-alt'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/" target="_blank">
+                                        <i class='bx bxl-pinterest-alt'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="agents-content">
+                            <span>64 1st Avenue, High Street, NZ 1002</span>
+                            <h3>
+                                <a href="property-details.html">Benthon Margulis</a>
+                            </h3>
+                            <p>1129 Properties</p>
+
+                            <ul class="rating-list">
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li class="color-gray"><i class='bx bxs-star'></i></li>
+                                <li>Average</li>
+                            </ul>
+
+                            <div class="message-icon">
+                                <a href="contact.html" target="_blank">
+                                    <i class='bx bx-envelope'></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="agents-bottom-content">
+                            <p>
+                                <i class='bx bxs-phone'></i>
+                                <a href="tel:000123456789">+000 123 456 789</a>
+                            </p>
+
+                            <div class="agents-btn">
+                                <a href="property-details.html" class="default-btn">KNOW DETAILS <span></span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agents-item">
+                        <div class="agents-image">
+                            <a href="property-details.html"><img src="{% static 'assets\images\agents\agents-1.jpg' %}" alt="image"></a>
+
+                            <ul class="social">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/?lang=en" target="_blank">
+                                        <i class='bx bxl-twitter'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class='bx bxl-instagram-alt'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/" target="_blank">
+                                        <i class='bx bxl-pinterest-alt'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="agents-content">
+                            <span>64 1st Avenue, High Street, NZ 1002</span>
+                            <h3>
+                                <a href="property-details.html">Thomas Jakson</a>
+                            </h3>
+                            <p>1127 Properties</p>
+
+                            <ul class="rating-list">
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li class="color-gray"><i class='bx bxs-star'></i></li>
+                                <li>Average</li>
+                            </ul>
+
+                            <div class="message-icon">
+                                <a href="contact.html" target="_blank">
+                                    <i class='bx bx-envelope'></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="agents-bottom-content">
+                            <p>
+                                <i class='bx bxs-phone'></i>
+                                <a href="tel:000123456789">+000 123 456 789</a>
+                            </p>
+
+                            <div class="agents-btn">
+                                <a href="property-details.html" class="default-btn">KNOW DETAILS <span></span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agents-item">
+                        <div class="agents-image">
+                            <a href="property-details.html"><img src="{% static 'assets\images\agents\agents-2.jpg' %}" alt="image"></a>
+
+                            <ul class="social">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/?lang=en" target="_blank">
+                                        <i class='bx bxl-twitter'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class='bx bxl-instagram-alt'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/" target="_blank">
+                                        <i class='bx bxl-pinterest-alt'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="agents-content">
+                            <span>64 1st Avenue, High Street, NZ 1002</span>
+                            <h3>
+                                <a href="property-details.html">Sinthiya Anvi</a>
+                            </h3>
+                            <p>1128 Properties</p>
+
+                            <ul class="rating-list">
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li class="color-gray"><i class='bx bxs-star'></i></li>
+                                <li>Average</li>
+                            </ul>
+
+                            <div class="message-icon">
+                                <a href="contact.html" target="_blank">
+                                    <i class='bx bx-envelope'></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="agents-bottom-content">
+                            <p>
+                                <i class='bx bxs-phone'></i>
+                                <a href="tel:000123456789">+000 123 456 789</a>
+                            </p>
+
+                            <div class="agents-btn">
+                                <a href="property-details.html" class="default-btn">KNOW DETAILS <span></span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agents-item">
+                        <div class="agents-image">
+                            <a href="property-details.html"><img src="{% static 'assets\images\agents\agents-3.jpg' %}" alt="image"></a>
+
+                            <ul class="social">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/?lang=en" target="_blank">
+                                        <i class='bx bxl-twitter'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class='bx bxl-instagram-alt'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/" target="_blank">
+                                        <i class='bx bxl-pinterest-alt'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="agents-content">
+                            <span>64 1st Avenue, High Street, NZ 1002</span>
+                            <h3>
+                                <a href="property-details.html">Benthon Margulis</a>
+                            </h3>
+                            <p>1129 Properties</p>
+
+                            <ul class="rating-list">
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li><i class='bx bxs-star'></i></li>
+                                <li class="color-gray"><i class='bx bxs-star'></i></li>
+                                <li>Average</li>
+                            </ul>
+
+                            <div class="message-icon">
+                                <a href="contact.html" target="_blank">
+                                    <i class='bx bx-envelope'></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="agents-bottom-content">
+                            <p>
+                                <i class='bx bxs-phone'></i>
+                                <a href="tel:000123456789">+000 123 456 789</a>
+                            </p>
+
+                            <div class="agents-btn">
+                                <a href="property-details.html" class="default-btn">KNOW DETAILS <span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% comment %} <div class="view-agents-btn">
+                    <a href="agents.html" class="default-btn">VIEW ALL AGENTS <span></span></a>
+                </div> {% endcomment %}
+            </div>
+        </div>
+        <!-- End Agents Area -->
+
+        <!-- Start Footer Area -->
+        <footer class="footer-area pt-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget">
+                            <div class="widget-logo">
+                                <a href="index.html">
+                                    {% comment %} <img src="{% static 'images\lat.png' %}" alt="image"> {% endcomment %}
+                                </a>
+                            </div>
+
+                            <p>Aenean sollicitudin lorem quis bibendum auctor nisi elit consequat ipsum necdo sagittis sem nibh id elit consequat ipsum.</p>
+
+                            <ul class="widget-social">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/?lang=en" target="_blank"><i class='bx bxl-twitter'></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                   
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget">
+                            <h3>Contact</h3>
+                            
+                            <ul class="widget-info">
+                                <li>
+                                    <i class='bx bxs-map'></i>
+                                    PC CHAMBER ,GROUND FLOOR, Gali Number 2, near SBI BANK, Mamura, NOIDA, Noida, Uttar Pradesh 201301
+                                </li>
+
+                                <li>
+                                    <i class='bx bxs-phone'></i>
+                                    <a href="tel:000123456789">+000 123 456 789</a>
+                                </li>
+
+                                <li>
+                                    <i class='bx bx-envelope'></i>
+                                    <a href=""<span class="__cf_email__" data-cfemail="d6beb3babab996b0bfb2b9f8b5b9bb">ssrhomezone@gmail.com</span></a>
+                                </li>
+
+                                <li>
+                                    <i class='bx bx-time'></i>
+                                    9 AM - 5 PM (Sun-Thur)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget">
+                            <h3>Newsletter</h3>
+
+                            <div class="widget-newsletter">
+                                <form class="newsletter-form" data-bs-toggle="validator">
+                                    <input type="email" class="input-newsletter" placeholder="Email Address" name="EMAIL" required="" autocomplete="off">
+            
+                                    <button type="submit"><i class='bx bx-envelope'></i></button>
+                                    <div id="validator-newsletter" class="form-result"></div>
+                                </form>
+
+                                <div class="newsletter-content">
+                                    <p>Sign up for our latest news and articles. We won’t give you spam emails.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="copyright-area-content">
+                        <p>
+                            Copyright © 2022 SSR Home Zone. All Rights Reserved by
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+
+        <!-- Start Go Top Area -->
+        <div class="go-top">
+            <i class='bx bx-chevron-up'></i>
+        </div>
+        <!-- End Go Top Area -->
+        
+        <!-- Links of JS files -->
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{% static 'assets\js\jquery.min.js' %}"></script>
+        <script src="{% static 'assets\js\bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'assets\js\jquery.meanmenu.js' %}"></script>
+        <script src="{% static 'assets\js\owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets\js\jquery.appear.js' %}"></script>
+        <script src="{% static 'assets\js\odometer.min.js' %}"></script>
+        <script src="{% static 'assets\js\nice-select.min.js' %}"></script>
+        <script src="{% static 'assets\js\jquery-ui.min.js' %}"></script>
+        <script src="{% static 'assets\js\jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'assets\js\fancybox.min.js' %}"></script>
+		<script src="{% static 'assets\js\jquery.ajaxchimp.min.js' %}"></script>
+		<script src="{% static 'assets\js\form-validator.min.js' %}"></script>
+        <script src="{% static 'assets\js\contact-form-script.js' %}"></script>
+        <script src="{% static 'assets\js\wow.min.js' %}"></script>
+        <script src="{% static 'assets\js\main.js' %}"></script>
+    </body>
+</html>

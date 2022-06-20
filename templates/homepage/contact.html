@@ -1,0 +1,289 @@
+﻿{% load static %}
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Links of CSS files -->
+        {% comment %} <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+        <link rel="stylesheet" href="assets\css\animate.min.css">
+        <link rel="stylesheet" href="assets\css\meanmenu.css">
+        <link rel="stylesheet" href="assets\css\boxicons.min.css">
+        <link rel="stylesheet" href="assets\css\flaticon.css">
+        <link rel="stylesheet" href="assets\css\odometer.min.css">
+        <link rel="stylesheet" href="assets\css\nice-select.min.css">
+        <link rel="stylesheet" href="assets\css\owl.carousel.min.css">
+        <link rel="stylesheet" href="assets\css\owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets\css\magnific-popup.min.css">
+        <link rel="stylesheet" href="assets\css\fancybox.min.css">
+        <link rel="stylesheet" href="assets\css\style.css">
+		<link rel="stylesheet" href="assets\css\responsive.css"> {% endcomment %}
+        <link rel="stylesheet" href="{% static 'assets\css\bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\meanmenu.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\boxicons.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\flaticon.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\odometer.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\nice-select.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\owl.theme.default.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\magnific-popup.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\fancybox.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets\css\style.css' %}">
+		<link rel="stylesheet" href="{% static 'assets\css\responsive.css' %}">
+		
+		
+		<title>Welcome to SSR Home Zone</title>
+
+        <link rel="icon" type="image/png" href="{% static 'assets\images\favicon.png' %}">
+    </head>
+
+    <body>
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+
+          <!-- Start Navbar Area -->
+          {% include 'homepage/base.html' %}
+        <!-- End Navbar Area -->
+        <!-- Start Page Banner Area -->
+        <div class="page-banner-area">
+            <div class="container">
+                <div class="page-banner-content wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="2000ms">
+                    <h2>Contact</h2>
+
+                    <ul>
+                        <li>
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li>Pages</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="page-banner-image wow fadeInRight" data-wow-delay="300ms" data-wow-duration="2000ms">
+                <img src="{% static 'assets\images\page-banner.png' %}" alt="image">
+            </div>
+        </div>
+        <!-- End Page Banner Area -->
+
+        <!-- Start Contact Area -->
+        <div class="contact-area ptb-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="contact-form">
+                            <div class="title">
+                                <h3>Get in Touch</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris.</p>
+                            </div>
+        
+                            <form id="contactForm">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input type="text" name="name" id="name" class="form-control" required="" data-error="Please enter your name">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input type="email" name="email" id="email" class="form-control" required="" data-error="Please enter your email">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <label>Phone Number</label>
+                                            <input type="text" name="phone_number" id="phone_number" required="" data-error="Please enter your number" class="form-control">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <label>Subject</label>
+                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control" required="" data-error="Please enter your subject">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Message</label>
+                                            <textarea name="message" class="form-control" id="message" cols="30" rows="5" required="" data-error="Write your message"></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-lg-12 col-md-12">
+                                        <button type="submit" class="default-btn">Send Message <span></span></button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="contact-address">
+                            <h3>Contact Address:</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                            <ul class="address-info">
+                                <li>
+                                    <i class='bx bxs-map'></i>
+                                    PC CHAMBER ,GROUND FLOOR, Gali Number 2, near SBI BANK, Mamura, NOIDA, Noida, Uttar Pradesh 201301
+                                </li>
+
+                                <li>
+                                    <i class='bx bxs-phone'></i>
+                                    <a href="tel:000123456789">+000 123 456 789</a>
+                                </li>
+
+                                <li>
+                                    <i class='bx bx-envelope'></i>
+                                    <a href=""><span class="__cf_email__" data-cfemail="fc9499909093bc9a959893d29f9391">ssrhomezone@gmail.com</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Contact Area -->
+
+        <!-- Start Footer Area -->
+        <footer class="footer-area pt-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget">
+                            <div class="widget-logo">
+                                <a href="index.html">
+                                    {% comment %} <img src="{% static 'images\lat.png' %}" alt="image"> {% endcomment %}
+                                </a>
+                            </div>
+
+                            <p>Aenean sollicitudin lorem quis bibendum auctor nisi elit consequat ipsum necdo sagittis sem nibh id elit consequat ipsum.</p>
+
+                            <ul class="widget-social">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/?lang=en" target="_blank"><i class='bx bxl-twitter'></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                   
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget">
+                            <h3>Contact</h3>
+                            
+                            <ul class="widget-info">
+                                <li>
+                                    <i class='bx bxs-map'></i>
+                                    PC CHAMBER ,GROUND FLOOR, Gali Number 2, near SBI BANK, Mamura, NOIDA, Noida, Uttar Pradesh 201301
+                                </li>
+
+                                <li>
+                                    <i class='bx bxs-phone'></i>
+                                    <a href="tel:000123456789">+000 123 456 789</a>
+                                </li>
+
+                                <li>
+                                    <i class='bx bx-envelope'></i>
+                                    <a href=""<span class="__cf_email__" data-cfemail="d6beb3babab996b0bfb2b9f8b5b9bb">ssrhomezone@gmail.com</span></a>
+                                </li>
+
+                                <li>
+                                    <i class='bx bx-time'></i>
+                                    9 AM - 5 PM (Sun-Thur)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget">
+                            <h3>Newsletter</h3>
+
+                            <div class="widget-newsletter">
+                                <form class="newsletter-form" data-bs-toggle="validator">
+                                    <input type="email" class="input-newsletter" placeholder="Email Address" name="EMAIL" required="" autocomplete="off">
+            
+                                    <button type="submit"><i class='bx bx-envelope'></i></button>
+                                    <div id="validator-newsletter" class="form-result"></div>
+                                </form>
+
+                                <div class="newsletter-content">
+                                    <p>Sign up for our latest news and articles. We won’t give you spam emails.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="copyright-area-content">
+                        <p>
+                            Copyright © 2022 SSR Home Zone. All Rights Reserved by
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+
+        <!-- Start Go Top Area -->
+        <div class="go-top">
+            <i class='bx bx-chevron-up'></i>
+        </div>
+        <!-- End Go Top Area -->
+        
+        <!-- Links of JS files -->
+       
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{% static 'assets\js\jquery.min.js' %}"></script>
+        <script src="{% static 'assets\js\bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'assets\js\jquery.meanmenu.js' %}"></script>
+        <script src="{% static 'assets\js\owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets\js\jquery.appear.js' %}"></script>
+        <script src="{% static 'assets\js\odometer.min.js' %}"></script>
+        <script src="{% static 'assets\js\nice-select.min.js' %}"></script>
+        <script src="{% static 'assets\js\jquery-ui.min.js' %}"></script>
+        <script src="{% static 'assets\js\jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'assets\js\fancybox.min.js' %}"></script>
+		<script src="{% static 'assets\js\jquery.ajaxchimp.min.js' %}"></script>
+		<script src="{% static 'assets\js\form-validator.min.js' %}"></script>
+        <script src="{% static 'assets\js\contact-form-script.js' %}"></script>
+        <script src="{% static 'assets\js\wow.min.js' %}"></script>
+        <script src="{% static 'assets\js\main.js' %}"></script
+    </body>
+</html>

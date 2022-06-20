@@ -1,0 +1,284 @@
+
+    {% extends 'AGENT/base_template.html' %}
+    {% load static %}
+
+
+
+    {% block content %}
+    <div class="content-body">
+        <!-- row -->
+        <div class="container-fluid">
+        
+            
+            <div class="form-head d-md-flex mb-sm-4 mb-3 align-items-start">
+                <div class="me-auto  d-lg-block">
+                    <h2 class="text-black font-w600">Dashboard</h2>
+                    <p class="mb-0">Welcome to SSR Property Admin</p>
+                </div>
+                <a href="{% url 'Agent_Home' %}" class="btn btn-primary rounded light me-3">Refresh</a>
+                <a href="{% url 'agent_profile' %}" class="btn btn-primary rounded"><i class="fas fa-cog me-0"></i></a>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-xxl-12">
+                    <div class="row">
+                       
+                        <div class="row mb-3 text-white">
+                            <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                <h3 class="text-white">{{agent_count1}}</h3>
+                
+                                <p>Total Agent</p>
+                                </div>
+                                <div class="icon">
+                                <i class="ion ion-pie-graph"></i>
+                                </div>
+                                <a href="{% url 'memberlist1' %}" class="small-box-footer text-white">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                            </div>
+                            <!-- ./col -->
+                            <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-success">
+                                <div class="inner">
+                                <h3 class="text-white">{{customer_count1}}</h3>
+                
+                                <p>Total Customer</p>
+                                </div>
+                                <div class="icon">
+                                <i class="ion ion-pie-graph"></i>
+                                </div>
+                                <a href="{% url 'customer_view1' %}" class="small-box-footer text-white">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                            </div>
+                            <!-- ./col -->
+                            <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-warning">
+                                <div class="inner">
+                                <h3 class="text-white">{{plot_count1}}</h3>
+                
+                                <p>Total Plot</p>
+                                </div>
+                                <div class="icon">
+                                <i class="ion ion-pie-graph"></i>
+                                </div>
+                                <a href="{% url 'view_plotno1' %}" class="small-box-footer text-white">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                            </div>
+                            <!-- ./col -->
+                            <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-danger">
+                                <div class="inner ">
+                                <h3 class="text-white">{{book_plot_count1}}</h3>
+                
+                                <p>Total BookPlot </p>
+                                </div>
+                                <div class="icon">
+                                <i class="ion ion-pie-graph"></i>
+                                </div>
+                                <a href="{% url 'agent_approvedplot' %}" class="small-box-footer text-white">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                            </div>
+                            <!-- ./col -->
+                        </div>
+                      
+                     
+                    </div>
+                </div>
+            
+                <div class="row">
+
+                    <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="new-arrival-product">
+                                    <div class="new-arrivals-img-contnent">
+                                        <img class="" src="{% static 'infra/assets/img/banner-66.jpg'%}" alt="">
+                                    </div>
+                                    <div class="new-arrival-content text-center mt-3">
+                                        <h4>Near By Metro Station</h4>
+                                        <ul class="star-rating">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                  
+                    <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="new-arrival-product">
+                                    <div class="new-arrivals-img-contnent">
+                                        <img class="img-fluid" src="{% static 'infra/assets/img/banner-55.jpg' %}" alt="">
+                                    </div>
+                                    <div class="new-arrival-content text-center mt-3">
+                                        <h4>Near By International Airport</h4>
+                                        <ul class="star-rating">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="new-arrival-product">
+                                    <div class="new-arrivals-img-contnent">
+                                        <img class="img-fluid" src="{% static 'infra/assets/img/film-city.jpg' %}" alt="">
+                                    </div>
+                                    <div class="new-arrival-content text-center mt-3">
+                                        <h4>Near By Film City</h4>
+                                        <ul class="star-rating">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star-half-empty"></i></li>
+                                            <li><i class="fa fa-star-half-empty"></i></li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="new-arrival-product">
+                                    <div class="new-arrivals-img-contnent">
+                                        <img class="img-fluid" src="{% static 'infra/assets/img/banner-22.jpg' %}" alt="">
+                                    </div>
+                                    <div class="new-arrival-content text-center mt-3">
+                                        <h4>Near By Formula 1 Racing Track</h4>
+                                        <ul class="star-rating">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="new-arrival-product">
+                                    <div class="new-arrivals-img-contnent">
+                                        <img class="img-fluid" src="{% static 'infra/assets/img/city-4.jpg' %}" alt="">
+                                    </div>
+                                    <div class="new-arrival-content text-center mt-3">
+                                        <h4>Buddh International Circuit</h4>
+                                        <ul class="star-rating">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="new-arrival-product">
+                                    <div class="new-arrivals-img-contnent">
+                                        <img class="img-fluid" src="{% static 'infra/assets/img/city-3.jpg' %}" alt="">
+                                    </div>
+                                    <div class="new-arrival-content text-center mt-3">
+                                        <h4>Yamuna Expressway</h4>
+                                        <ul class="star-rating">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="new-arrival-product">
+                                    <div class="new-arrivals-img-contnent">
+                                        <img class="img-fluid" src="{% static 'infra/assets/img/city-2.jpg' %}" alt="">
+                                    </div>
+                                    <div class="new-arrival-content text-center mt-3">
+                                        <h4>Cricket Stadium</h4>
+                                        <ul class="star-rating">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star-half-empty"></i></li>
+                                            <li><i class="fa fa-star-half-empty"></i></li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="new-arrival-product">
+                                    <div class="new-arrivals-img-contnent">
+                                        <img class="img-fluid" src="{% static 'infra/assets/img/city-1.jpg' %}" alt="">
+                                    </div>
+                                    <div class="new-arrival-content text-center mt-3">
+                                        <h4>Film  City Noida 5.5 Kilometer</h4>
+                                        <ul class="star-rating">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star-half-empty"></i></li>
+                                            <li><i class="fa fa-star-half-empty"></i></li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    {% block custom_js %}
+    <script></script>
+    {% endblock custom_js %}
+
+
+    {% endblock  %}

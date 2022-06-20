@@ -1,0 +1,145 @@
+<!--************
+            Sidebar start
+       *************-->
+       
+       <div class="deznav ">
+            
+        <div class="deznav-scroll">
+            <ul class="metismenu" id="menu">
+                    <li>
+                    
+                        </li>
+                        <li><a class="flaticon-money" href="javascript:void()" aria-expanded="false">
+                    
+                            <i class="flaticon-money"></i>
+                            <span class="nav-text">Customer Id</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{% url 'add_user' %}"> Customer Id</a></li>
+                            <li><a href="{% url 'customer_view' %}">View Customer ID</a></li>
+                            
+                            
+                                                     
+                        </ul>
+                    </li>
+                        <li><a class="flaticon-money" href="javascript:void()" aria-expanded="false">
+                    
+                            <i class="flaticon-money"></i>
+                            <span class="nav-text">Plot</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{% url 'addplot' %}">Add Plot No</a></li>
+                            <li><a href="{% url 'view_plotno' %}">View Plot No</a></li>
+                            <li><a href="{% url 'bookplot' %}">Book Plot</a></li>
+                            
+                            
+                                                     
+                        </ul>
+                    </li>
+                       
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    
+                        <i class="flaticon-form-1"></i>
+                        <span class="nav-text">Plot Details</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="{% url 'approvedplote' %}">Booking Details</a></li>
+                        {% comment %} <li><a href="{% url 'pendingPlot' %}">Pending Plot</a></li>
+                        <li><a href="{% url 'bookingdetails' %}">Booking Details</a></li>
+                        <li><a href="{% url 'cancelledplote' %}">Cancelled Plot</a></li>
+                        <li><a href="{% url 'installmentdetail' %}">Installment Details</a></li> {% endcomment %}
+                        <li><a href="{% url 'searchbar' %}">Search</a></li>
+                                                 
+                    </ul>
+                </li>
+                {% comment %} <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-app"></i>
+                    <span class="nav-text">Print Details</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{% url 'agrrement' %}">Agreement</a></li>
+                    <li><a href="{% url 'tokenslip' %}">Token Slip</a></li>
+                    <li><a class="" href="javascript:void()" aria-expanded="false">Slip Details</a>
+                        <ul aria-expanded="false">
+                           
+                        </ul>
+                    </li>
+                    
+                    
+                        
+                    
+                </ul>
+            </li> {% endcomment %}
+            </li>
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-form-1"></i>
+                <span class="nav-text">Kyc Details</span>
+            </a>
+            <ul aria-expanded="false">
+                <li><a href="{% url 'kyc' %}"> Kyc</a></li>
+                {% comment %} <li><a href="{% url 'pendingkyc' %}">Pending Kyc</a></li> {% endcomment %}
+                <li><a href="{% url 'approvedkyc' %}">Approved Kyc</a></li>
+                 {% comment %} <li><a href="{% url 'rejectedkyc' %}">Rejected Kyc</a></li> {% endcomment %}
+                {% comment %} <li><a href="{% url 'updatekyc' %}">Update User Kyc</a></li> {% endcomment %}
+              
+            </ul>
+        </li>
+           
+
+                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-dashboard-1"></i>
+                        <span class="nav-text">General Activity</span>
+                    </a>
+                    
+                    <ul aria-expanded="false" class = 'deznav-scroll'>
+                        <li><a href="{% url 'memberlist' %}"> Member List</a></li>
+                        <li><a href="{% url 'fundtransfer' %}">Fund Transfer</a></li>
+                        <li><a href="{% url 'payplotinstallment' %}">Pay Plot Installment</a></li>
+                        <li><a href="{% url 'updateplotinstallment' %}">Update Plot Installment Details</a></li>
+                        <li><a href="{% url 'updatebookingdate' %}">Update Booking date & Extra EDC</a></li>
+                        <li><a href="{% url 'deleteplotinstallment' %}">Delete Plot Installment</a></li>
+                        <li><a href="{% url 'updateplotrate' %}">Update Plot Rate &  Plot Size(sqft) </a></li>
+                        <li><a href="property-details.html">Change Rank</a></li>
+                        
+                        <li><a href="{% url 'blockassociate' %}">Block Associate</a></li>
+                        <li><a href="{% url 'blockassociatelist' %}">Block Associate List</a></li>
+                        
+                    </ul>
+                </li>
+                
+                
+
+                <li>
+                        
+                    </a>
+                    
+                </li>
+               
+                <li><a class="has-arrow ai-icon" href="{% url 'previewfunds'%}" aria-expanded="false">
+                    <i class="flaticon-plugin"></i>
+                    <span class="nav-text">View Funds</span>
+                </a>
+                
+            </li>
+                
+            <li>
+                <a class="has-arrow ai-icon" href="{% url 'supportsystem'%}"><i class="flaticon-money"></i>Support System  <span class="sr-only">(current)</span></a>
+            </a>
+            
+        </li>
+                <li>
+                    <a class="has-arrow ai-icon" href="{% url 'profile'%}"><i class="flaticon-money"></i>Settings  <span class="sr-only">(current)</span></a>
+                </a>
+                
+            </li>
+                 
+            
+            <div class="copyright">
+                <p><strong>Omah Dashboard</strong> © 2022 All Rights Reserved</p>
+                <p>by DexignZone</p>
+            </div>
+        </div>
+    </div>
+    <!--************
+        Sidebar end
+    *************-->

@@ -1,0 +1,93 @@
+<html>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=divice-width,initial-scale=1.0">
+    <link href="{% static 'css\manish.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class=" header col-lg-12">
+                <h1>SSR HOME ZONE PVT.LDT.</h1>
+                <h3>Adress The Upper House, 1st Floor D.S.C. Road Barola, Sector-49, Gautam Budh Nagar(U.P.)PIN-201301
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" header-bottom col-lg-12">
+                <h3>Installment Slip</h3>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="date ">
+                <label1>Reciept  No.</label1><input type="text" class="number1" id="plotno" name="plot_no" value="{{ plot_no.plot_number }} " readonly/>
+            </div>
+            <div class="date1">
+                <label1>Date</label1><input type="text" class="number1" id="plotsize" name="plot_size" value="{{ plot_no.joinig_date }} " readonly />
+            </div>
+        </div>
+        <div class="row">
+            <div class="customer col-lg-12">
+                <h3>Customer Details</h3>
+            </div><br>
+            <div class="row">
+                <div class="customer-detail col-lg-12">
+                    <label1>Booked By.</label1><input type="text" class="number3"id="plcrate" name="plc_rate" value="{{ plot_no.name }} " readonly />
+                    {% comment %} <label1>S/O.W/O.D/O</label1><input type="text" class="number3"id="plc"  name="plc" value="{{ plot_no.father_name }} " readonly/> {% endcomment %}
+                    <label1>Mail</label1><input type="text" class="number3"id="plc"  name="plc" value="{{ plot_no.mail }} " readonly/>
+                    <label1>Address</label1><input type="text" class="number3"id="plc"  name="plc" value="{{ plot_no.addresss }} " readonly/>
+                    <label1>Mobile/Phone</label1><input type="text" class="number3"id="plot_rate" name="plot_rate" value="{{ plot_no.mobile_no }} " readonly/><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="customer col-lg-12">
+                <h3>payment Details</h3>
+            </div><br>
+            <div class="row">
+                <div class="customer-detail col-lg-12">
+                    <label1>Recieved with thanks a sum of</label1><input type="text" class="number4"value="{{ plot_no.payment_amount }} " readonly /><label2>Rupees</label2><br>
+                    <label1>Payment Type</label1><input type="text" class="number5"value="{{ plot_no.payment_mode }} " readonly/>
+                    <label1>Refreence ID</label1><input type="text" class="number3"value="{{ plot_no.ref_id }} " readonly/><br>
+                    <label1>Refreence Name</label1><input type="text" class="number3"value="{{ plot_no.name }} " readonly/><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="customer col-lg-12">
+                <h3>Plot Details</h3>
+            </div><br>
+            <div class="row">
+                <div class="customer-detail col-lg-12">
+                    <label1>Plot No</label1><input type="text" class="number5" value="{{ plot_no.plot_number }} " readonly/>
+                    <label1>Plot Size</label1><input type="text" class="number4"value="{{ plot_no.plot_size }}  " readonly/><label2>Sqft</label2>
+                    <label1>Plot Rate</label1><input type="text" class="number5"  value="{{ plot_no.Payable_amout }} " readonly/><br>
+                    <label1>Booking Amount</label1><input type="text" class="number3" value="{{ plot_no.payment_amount }} " readonly/>
+                    <label1>Remaining Amount</label1><input type="text" class="number3"value="{{ plot_no.remaining_amount }} " readonly/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="case col-lg-12">
+                    <label3>From Shree Shyam Radhika Home Zone Pvt. Ltd.</label3><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer col-lg-12">
+                    <label4>To Realization of cheque Booking Amount is not Refundable </label4> <br> <label4></label4> in Any Case. Checque Bouncing Charges Rs 500/- to Regular </label4> <br> <label4> Months EMI Plotl Number will be Cancelled.</label4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="case col-lg-12">
+                    <label3>Auth Sigantoty</label3><br>
+                </div>
+            </div>
+        </div>
+         
+    </div>
+</body>
+
+</html>

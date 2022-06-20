@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../fonts/flaticon.bin") format("truetype"),
+url("../fonts/flaticon.woff") format("woff"),
+url("../fonts/flaticon-1.bin") format("woff2"),
+url("../fonts/flaticon.eot") format("embedded-opentype"),
+url("../fonts/flaticon.svg") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-modern-house:before {
+    content: "\f101";
+}
+.flaticon-house:before {
+    content: "\f102";
+}
+.flaticon-buy:before {
+    content: "\f103";
+}
+.flaticon-sublease:before {
+    content: "\f104";
+}
+.flaticon-buyer:before {
+    content: "\f105";
+}
+.flaticon-mortgage:before {
+    content: "\f106";
+}
+.flaticon-house-insurance:before {
+    content: "\f107";
+}
+.flaticon-birthday-party:before {
+    content: "\f108";
+}
+.flaticon-apartment:before {
+    content: "\f109";
+}

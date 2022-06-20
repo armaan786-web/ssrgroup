@@ -1,0 +1,936 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>JSM Pro Infra </title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'infra/images/favicon.png' %}">
+    <!-- Custom CSS -->
+    <link href="{% static 'infra/assets/css/styles.css' %}" rel="stylesheet">
+    <!-- Custom Color Option -->
+    <link href="{% static 'infra/assets/css/colors.css' %}" rel="stylesheet">
+    <style>
+        .modal-dialog {
+            max-width: 500px;
+        }
+
+        .justify-content-center {
+            -webkit-box-pack: center !important;
+            -ms-flex-pack: center !important;
+            justify-content: center !important;
+        }
+
+        .single-service-wrap {
+            text-align: center;
+            box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.06);
+            border-radius: 0 0 5px 5px;
+            transition: all 0.4s ease-in;
+        }
+
+            .single-service-wrap .thumb::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: #5ba600;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                z-index: -1;
+                transition: all 0.4s ease-in;
+            }
+
+            .single-service-wrap .thumb {
+                height: 181px;
+                width: 181px;
+                background: url(demo/html/mingrand/assets/img/service/bg.png);
+                border-radius: 50%;
+                line-height: 178px;
+                display: inline-block;
+                border: 4px solid #ffffff;
+                margin-top: -50%;
+                position: relative;
+                z-index: 1;
+            }
+
+            .single-service-wrap:hover .thumb::after {
+                opacity: 0;
+            }
+
+            .single-service-wrap:hover {
+                background: #5ba600;
+            }
+
+
+            .single-service-wrap .single-service-details {
+                padding: 25px 30px 36px;
+            }
+
+                .single-service-wrap .single-service-details h4 {
+                    font-size: 26px;
+                    font-weight: 500;
+                    margin-bottom: 15px;
+                }
+
+                    .single-service-wrap .single-service-details h4 a {
+                        transition: all 0.4s ease-in;
+                    }
+
+            .single-service-wrap:hover p, .single-service-wrap:hover h4 a {
+                color: #ffffff;
+            }
+
+            .single-service-wrap .single-service-details p {
+                transition: all 0.4s ease-in;
+            }
+
+            .single-service-wrap:hover p, .single-service-wrap:hover h4 a {
+                color: #ffffff;
+            }
+
+            .single-service-wrap .single-service-details h4 a {
+                transition: all 0.4s ease-in;
+                font-weight: 600;
+                font-size: 20px;
+            }
+    </style>
+</head>
+
+<body class="green-skin">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div id="preloader"><div class="preloader"><span></span><span></span></div></div>
+
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+
+        <!-- ============================================================== -->
+        <!-- Top header  -->
+        <!-- ============================================================== -->
+        <!-- Start Navigation -->
+        <div class="top-header">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="cn-info">
+                            <ul>
+                                <li><i class="ti-email"></i>jsmproinfra@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <ul class="top-social">
+                            <li><a href="#"><i class="lni-facebook"></i></a></li>
+                            <li><a href="#"><i class="lni-linkedin"></i></a></li>
+                            <li><a href="#"><i class="lni-instagram"></i></a></li>
+                            <li><a href="#"><i class="lni-twitter"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="header header-light">
+            <div class="container">
+                <nav id="navigation" class="navigation navigation-landscape">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="#"><img src="{% static 'infra/assets/img/logo.png' %}" class="logo" alt=""></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper" style="transition-property: none;">
+                        <ul class="nav-menu">
+                            <li class="active">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="about-us.html">About Us</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="">Property Plot</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'login' %}" class="bg--success" style="border-radius:8px; color: #FFF;">Login Now</a>
+                            </li>
+                            <li>
+                                &nbsp;&nbsp;
+                                <a href="{% url 'customer' %}" class="bg--success" style="border-radius:8px; color: #FFF;">Customer Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- End Navigation -->
+        <div class="clearfix"></div>
+        <!-- ============================================================== -->
+        <!-- Top header  -->
+        <!-- ============================================================== -->
+        <!-- ============================ Hero Banner  Start================================== -->
+
+        <div class="home-slider margin-bottom-0">
+
+            <div data-background-image="{% static 'infra/assets/img/banner-3.jpg' %}" class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="">
+
+                                <!-- Slide Title -->
+                                <div class="home-slider-desc">
+                                    <!--<div class="modern-pro-wrap">
+                                        <span class="property-type">For Sale</span>
+
+                                    </div>-->
+                                    <div class="home-slider-title">
+                                        <h3><a href="#">Welcome to <br>JSM Pro Infra</a></h3>
+                                        <span><i class="lni-map-marker"></i>Near By Cricket Styadium  </span>
+                                    </div>
+
+                                    <div class="slide-property-info">
+                                        <p>Noida is very good locality. it is very nice and beautiful locality. <br> All basic amenities like hospitals, schools, colleges and markets are available nearby.</p>
+                                    </div>
+                                    <!--<a href="#" class="read-more">View Details <i class="fa fa-angle-right"></i></a>-->
+
+                                </div>
+                                <!-- Slide Title / End -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-background-image="{% static 'infra/assets/img/banner-2.jpg' %}" class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="">
+
+                                <!-- Slide Title -->
+                                <div class="home-slider-desc">
+                                    <!--<div class="modern-pro-wrap">
+                                        <span class="property-type">For Sale</span>
+
+                                    </div>-->
+                                    <div class="home-slider-title">
+                                        <h3><a href="#">Welcome to <br>JSM Pro Infra</a></h3>
+                                        <span><i class="lni-map-marker"></i>Near By Formula 1 Racing Track  </span>
+                                    </div>
+
+                                    <div class="slide-property-info">
+                                        <p>Greater Noida is very good locality. it is very nice and beautiful locality.<br> All basic amenities like hospitals, schools, colleges and markets are available nearby.</p>
+                                    </div>
+                                    <!--<a href="#" class="read-more">View Details <i class="fa fa-angle-right"></i></a>-->
+
+                                </div>
+                                <!-- Slide Title / End -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide -->
+            <div data-background-image="{% static 'infra/assets/img/banner-1.jpg' %}" class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="">
+
+                                <!-- Slide Title -->
+                                <div class="home-slider-desc">
+                                    <!--<div class="modern-pro-wrap">
+                                        <span class="property-type">For Sale</span>
+
+                                    </div>-->
+                                    <div class="home-slider-title">
+                                        <h3><a href="#">Welcome to <br>JSM Pro Infra</a></h3>
+                                        <span><i class="lni-map-marker"></i>Near By Yamuna Expressway  </span>
+                                    </div>
+
+                                    <div class="slide-property-info">
+                                        <p>Yamuna Expressway is very good locality. it is very nice and beautiful locality.<br> All basic amenities like hospitals, schools, colleges and markets are available nearby.</p>
+                                    </div>
+                                    <!--<a href="#" class="read-more">View Details <i class="fa fa-angle-right"></i></a>-->
+
+                                </div>
+                                <!-- Slide Title / End -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide -->
+            <!-- Slide -->
+            <!-- Slide -->
+            <div data-background-image="{% static 'infra/assets/img/banner-4.jpg' %}" class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="">
+
+                                <!-- Slide Title -->
+                                <div class="home-slider-desc">
+                                    <!--<div class="modern-pro-wrap">
+                                        <span class="property-type">For Sale</span>
+
+                                    </div>-->
+                                    <div class="home-slider-title">
+                                        <h3><a href="#">Welcome to <br>JSM Pro Infra</a></h3>
+                                        <span><i class="lni-map-marker"></i>Near By Film City  </span>
+                                    </div>
+
+                                    <div class="slide-property-info">
+                                        <p>Sector 21 Greater Noida is very good locality. it is very nice and beautiful locality.<br> All basic amenities like hospitals, schools, colleges and markets are available nearby.</p>
+                                    </div>
+                                    <!--<a href="#" class="read-more">View Details <i class="fa fa-angle-right"></i></a>-->
+
+                                </div>
+                                <!-- Slide Title / End -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-background-image="{% static 'infra/assets/img/banner-5.jpg' %}" class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="">
+
+                                <!-- Slide Title -->
+                                <div class="home-slider-desc">
+                                    <!--<div class="modern-pro-wrap">
+                                        <span class="property-type">For Sale</span>
+
+                                    </div>-->
+                                    <div class="home-slider-title">
+                                        <h3><a href="#">Welcome to <br>JSM Pro Infra</a></h3>
+                                        <span><i class="lni-map-marker"></i>Near By International Airport  </span>
+                                    </div>
+
+                                    <div class="slide-property-info">
+                                        <p>Noida is very good locality. it is very nice and beautiful locality.<br> All basic amenities like hospitals, schools, colleges and markets are available nearby.</p>
+                                    </div>
+                                    <!--<a href="#" class="read-more">View Details <i class="fa fa-angle-right"></i></a>-->
+
+                                </div>
+                                <!-- Slide Title / End -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-background-image="{% static 'infra/assets/img/banner-6.jpg' %}" class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="">
+
+                                <!-- Slide Title -->
+                                <div class="home-slider-desc">
+                                    <!--<div class="modern-pro-wrap">
+                                        <span class="property-type">For Sale</span>
+
+                                    </div>-->
+                                    <div class="home-slider-title">
+                                        <h3><a href="#">Welcome to <br>JSM Pro Infra</a></h3>
+                                        <span><i class="lni-map-marker"></i>Near By Metro Station  </span>
+                                    </div>
+
+                                    <div class="slide-property-info">
+                                        <p>Noida is very good locality. it is very nice and beautiful locality.<br> All basic amenities like hospitals, schools, colleges and markets are available nearby.</p>
+                                    </div>
+                                    <!--<a href="#" class="read-more">View Details <i class="fa fa-angle-right"></i></a>-->
+
+                                </div>
+                                <!-- Slide Title / End -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- ============================ Hero Banner End ================================== -->
+        <!-- ============================ Slide Property Start ================================== -->
+
+        <div class="service-area">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-10">
+                        <div class="single-service-wrap">
+                            <div class="thumb">
+                                <img src="{% static 'infra/assets/img/1.png' %}" alt="icon">
+                            </div>
+                            <div class="single-service-details">
+                                <h4><a href="">Sell Property</a></h4>
+                                <p>At JSM Pro Infra our main aim is to eliminate brokers from whole rental scene. In order to achieve that we verify each owner/tenant's account...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-10">
+                        <div class="single-service-wrap">
+                            <div class="thumb">
+                                <img src="{% static 'infra/assets/img/2.png' %}" alt="icon">
+                            </div>
+                            <div class="single-service-details">
+                                <h4><a href="">Daily Apartment</a></h4>
+                                <p>JSM Pro Infra is a tech-enabled platform that provides easy access, transparency, and liquidity to a curated selection of rent yielding ... </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-10">
+                        <div class="single-service-wrap mb-0">
+                            <div class="thumb">
+                                <img src="{% static 'infra/assets/img/3.png' %}" alt="icon">
+                            </div>
+                            <div class="single-service-details">
+                                <h4><a href="">Our Aim</a></h4>
+                                <p>Our aim is to make transparent property investments between buyer and seller and maintain high standards of honesty with the ....</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="sec-heading2 center  mb-3">
+                            <div class="sec-left">
+                                <h3>Find Location property for you.</h3>
+
+                            </div>
+                            <!--<div class="sec-right">
+                                <a href="">View All<i class="ti-angle-double-right ml-2"></i></a>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="sidebar-property-slide">
+
+                            <!-- Single Property -->
+                            <div class="single-items">
+                                <div class="property_item classical-list">
+                                    <div class="image">
+                                        <a href="">
+                                            <img src="{% static 'infra/assets/img/slide1.jpg' %}" alt="latest property" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <!--<div class="proerty_content">
+                                        <div class="proerty_text">
+                                            <h3 class="captlize"><a href="">Residential land / Plot in  </a></h3>
+                                        </div>
+                                        <p class="property_add">Yamuna Expressway</p>
+
+                                    </div>-->
+                                </div>
+                            </div>
+
+                            <div class="single-items">
+                                <div class="property_item classical-list">
+                                    <div class="image">
+                                        <a href="">
+                                            <img src="{% static 'infra/assets/img/slide2.jpg' %}" alt="latest property" class="img-fluid">
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="single-items">
+                                <div class="property_item classical-list">
+                                    <div class="image">
+                                        <a href="">
+                                            <img src="{% static 'infra/assets/img/banner-1.jpg' %}" alt="latest property" class="img-fluid">
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="single-items">
+                                <div class="property_item classical-list">
+                                    <div class="image">
+                                        <a href="">
+                                            <img src="{% static 'infra/assets/img/slide3.jpg' %}" alt="latest property" class="img-fluid">
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ============================ Slide Property End ================================== -->
+        <!-- ============================ Slide Location Start ================================== -->
+        <section class="pt-0">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="sec-heading2 center">
+                            <div class="sec-left">
+                                <h3>Find properties in these cities</h3>
+                                <p>Find new & featured property for you.</p>
+                            </div>
+                            <div class="sec-right">
+                                <a href="">View All<i class="ti-angle-double-right ml-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="location-slide">
+
+                            <!-- Single location -->
+                            <div class="single-items">
+                                <a href="l" class="img-wrap">
+                                    <div class="img-wrap-content visible">
+                                        <h4>Film  City Noida</h4>
+                                        <span>5.5 Kilometer</span>
+                                    </div>
+                                    <div class="img-wrap-background" style="background-image: url({% static 'infra/assets/img/city-1.jpg' %});"></div>
+                                </a>
+                            </div>
+
+                            <!-- Single location -->
+                            <div class="single-items">
+                                <a href="l" class="img-wrap">
+                                    <div class="img-wrap-content visible">
+                                        <h4>Cricket Stadium</h4>
+                                        <span>3.5 Kilometer</span>
+                                    </div>
+                                    <div class="img-wrap-background" style="background-image: url({% static 'infra/assets/img/city-2.jpg' %});"></div>
+                                </a>
+                            </div>
+
+                            <!-- Single location -->
+                            <div class="single-items">
+                                <a href="#" class="img-wrap">
+                                    <div class="img-wrap-content visible">
+                                        <h4>Yamuna Expressway</h4>
+                                        <span>1.5 Kilometer</span>
+                                    </div>
+                                    <div class="img-wrap-background" style="background-image: url({% static 'infra/assets/img/city-3.jpg' %});"></div>
+                                </a>
+                            </div>
+
+                            <!-- Single location -->
+                            <div class="single-items">
+                                <a href="#" class="img-wrap">
+                                    <div class="img-wrap-content visible">
+                                        <h4>Buddh International Circuit</h4>
+                                        <span>2.5 Kilometer</span>
+                                    </div>
+                                    <div class="img-wrap-background" style="background-image: url({% static 'infra/assets/img/city-4.jpg' %});"></div>
+                                </a>
+                            </div>
+
+                            <!-- Single location -->
+                            <div class="single-items">
+                                <a href="#" class="img-wrap">
+                                    <div class="img-wrap-content visible">
+                                        <h4>Film  City Noida</h4>
+                                        <span>5.5 Kilometer</span>
+                                    </div>
+                                    <div class="img-wrap-background" style="background-image: url({% static 'infra/assets/img/city-1.jpg' %});"></div>
+                                </a>
+                            </div>
+
+                            <!-- Single location -->
+                            <div class="single-items">
+                                <a href="#" class="img-wrap">
+                                    <div class="img-wrap-content visible">
+                                        <h4>Yamuna Expressway</h4>
+                                        <span>1.5 Kilometer</span>
+                                    </div>
+                                    <div class="img-wrap-background" style="background-image: url({% static 'infra/assets/img/city-3.jpg' %});"></div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ============================ Slide Location End ================================== -->
+        <!-- ============================ Browse Place ================================== -->
+        <section class="image-cover" style="background:url({% static 'infra/assets/img/new-banner-3.jpg' %}) no-repeat;" data-overlay="3">
+            <div class="ht-50"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-10">
+
+                    </div>
+                </div>
+            </div>
+            <div class="ht-50"></div>
+        </section>
+
+        <section class="theme-bg call-to-act-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="call-to-act">
+                            <div class="call-to-act-head">
+                                <h3>Want to Become a Real Estate Agent?</h3>
+                                <span>We'll help you to grow your career and growth.</span>
+                            </div>
+                            <a href="#" class="btn btn-call-to-act">SignUp Today</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============================ Call To Action End ================================== -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3523.3075317330754!2d77.60740781506813!3d27.98448608267801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDU5JzA0LjIiTiA3N8KwMzYnMzQuNiJF!5e0!3m2!1sen!2sin!4v1602779670175!5m2!1sen!2sin" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <!-- ============================ Footer Start ================================== -->
+        <footer class="dark-footer skin-dark-footer">
+            <div>
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-4">
+                            <div class="footer-widget">
+                                <img src="{% static 'infra/assets/img/logo-light.png' %}" class="img-footer" alt="">
+                                <div class="footer-add">
+                                    <p>Taj Express Highway, Uttar Pradesh 202165</p>
+                                    <p>jsmproinfra@gmail.com</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4">
+                            <div class="footer-widget">
+                                <h4 class="widget-title">Navigations</h4>
+                                <ul class="footer-menu">
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">FAQs Page</a></li>
+                                    <li><a href="">Checkout</a></li>
+                                    <li><a href="">Contact</a></li>
+                                    <li><a href="">Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-4">
+                            <div class="footer-widget">
+                                <h4 class="widget-title">The Highlights</h4>
+                                <ul class="footer-menu">
+                                    <li><a href="#">Apartment</a></li>
+                                    <li><a href="#">My Houses</a></li>
+                                    <li><a href="#">Restaurant</a></li>
+                                    <li><a href="#">Nightlife</a></li>
+                                    <li><a href="#">Villas</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-6">
+                            <div class="footer-widget">
+                                <h4 class="widget-title">My Account</h4>
+                                <ul class="footer-menu">
+                                    <li><a href="#">My Profile</a></li>
+                                    <li><a href="#">My account</a></li>
+                                    <li><a href="#">My Property</a></li>
+                                    <li><a href="#">Favorites</a></li>
+                                    <li><a href="#">Cart</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget">
+                                <h4 class="widget-title">Download Apps</h4>
+                                <a href="#" class="other-store-link">
+                                    <div class="other-store-app">
+                                        <div class="os-app-icon">
+                                            <i class="lni-playstore theme-cl"></i>
+                                        </div>
+                                        <div class="os-app-caps">
+                                            Google Play
+                                            <span>Get It Now</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="other-store-link">
+                                    <div class="other-store-app">
+                                        <div class="os-app-icon">
+                                            <i class="lni-apple theme-cl"></i>
+                                        </div>
+                                        <div class="os-app-caps">
+                                            App Store
+                                            <span>Now it Available</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6 col-md-6">
+                            <p class="mb-0">© 2020 JSM Pro Infra. All Rights Reserved</p>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 text-right">
+                            <ul class="footer-bottom-social">
+                                <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#"><i class="ti-twitter"></i></a></li>
+                                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                                <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ============================ Footer End ================================== -->
+        <!-- Log In Modal -->
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+                <div class="modal-content" id="registermodal">
+                    <span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+                    <div class="modal-body">
+                        <h4 class="modal-header-title">Log In</h4>
+                        <div class="login-form">
+                            <form>
+
+                                <div class="form-group">
+                                    <label>User Name</label>
+                                    <div class="input-with-icon">
+                                        <input type="text" class="form-control" placeholder="Username">
+                                        <i class="ti-user"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <div class="input-with-icon">
+                                        <input type="password" class="form-control" placeholder="*******">
+                                        <i class="ti-unlock"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-md full-width pop-login">Login</button>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-divider"><span>Or login via</span></div>
+                        <div class="social-login mb-3">
+                            <ul>
+                                <li><a href="#" class="btn connect-fb"><i class="ti-facebook"></i>Facebook</a></li>
+                                <li><a href="#" class="btn connect-twitter"><i class="ti-twitter"></i>Twitter</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-center">
+                            <p class="mt-5"><a href="#" class="link">Forgot password?</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+        <!-- Sign Up Modal -->
+        <div class="modal fade signup" id="signup" tabindex="-1" role="dialog" aria-labelledby="sign-up" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+                <div class="modal-content" id="sign-up">
+                    <span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+                    <div class="modal-body">
+                        <h4 class="modal-header-title">Sign Up</h4>
+                        <div class="login-form">
+                            <form>
+
+                                <div class="row">
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="text" class="form-control" placeholder="Full Name">
+                                                <i class="ti-user"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="email" class="form-control" placeholder="Email">
+                                                <i class="ti-email"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="text" class="form-control" placeholder="Username">
+                                                <i class="ti-user"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="password" class="form-control" placeholder="*******">
+                                                <i class="ti-unlock"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="password" class="form-control" placeholder="123 546 5847">
+                                                <i class="lni-phone-handset"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <select class="form-control">
+                                                    <option>As a Customer</option>
+                                                    <option>As a Agent</option>
+                                                    <option>As a Agency</option>
+                                                </select>
+                                                <i class="ti-briefcase"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-md full-width pop-login">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-divider"><span>Or login via</span></div>
+                        <div class="social-login mb-3">
+                            <ul>
+                                <li><a href="#" class="btn connect-fb"><i class="ti-facebook"></i>Facebook</a></li>
+                                <li><a href="#" class="btn connect-twitter"><i class="ti-twitter"></i>Twitter</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-center">
+                            <p class="mt-5"><i class="ti-user mr-1"></i>Already Have An Account? <a href="#" class="link">Go For LogIn</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+
+        <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+    </div>
+    <style>
+        #bonanzaModal {
+            background: #00000082;
+        }
+
+        p {
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+
+        .img--layout {
+            max-width: 100px;
+        }
+    </style>
+
+    <!--<div class="modal fadeOut" id="bonanzaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document" style="margin-top: 50px; background: none; border:7px solid #fff;">
+            <div class="modal-content" style="background: none; box-shadow: none;">
+                <button type="button" class=" pull-right" style="z-index: 1116;margin-bottom: -18px;position: absolute;right: -7px;border: none;top: -7px;background: #e21b1b;"
+                        data-dismiss="modal" id="closeModal">
+                    <i class="">
+                        <img src="https://image.flaticon.com/icons/png/512/458/458594.png" style="width: 40px;">
+                    </i>
+                </button>
+                <div class="modal-body" style="padding: 0px;">
+                    <img src="assets/img/popup.jpg" class="img-responsive" style="margin:0 auto; display:block;" />
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- Color Switcher -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="{% static 'infra/assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'infra/assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'infra/assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'infra/assets/js/rangeslider.js' %}"></script>
+    <script src="{% static 'infra/assets/js/select2.min.js' %}"></script>
+    <script src="{% static 'infra/assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'infra/assets/js/slick.js' %}"></script>
+    <script src="{% static 'infra/assets/js/slider-bg.js' %}"></script>
+    <script src="{% static 'infra/assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'infra/assets/js/imagesloaded.js' %}"></script>
+    <script src="{% static 'infra/assets/js/custom.js' %}"></script>
+    <script src="{% static 'infra/assets/js/cl-switch.js' %}"></script>
+    <script type="text/javascript">
+        //            $(window).load(function () {
+        $(document).ready(function () {
+            //$('#bonanzaModal').fadeIn();
+            setTimeout(function () {
+                $("#bonanzaModal").delay(1000).fadeIn();
+            }, 1000);
+            $('#closeModal').click(function (e) {
+                $('#bonanzaModal').fadeOut();
+            });
+            $('#closeModal2').click(function (e) {
+                $('#bonanzaModal').fadeOut();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>SSR|GROUP </title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'infra/images/favicon.png' %}">
+    <!-- Custom CSS -->
+    <link href="{% static 'infra/assets/css/styles.css' %}" rel="stylesheet">
+    <!-- Custom Color Option -->
+    <link href="{% static 'infra/assets/css/colors.css' %}" rel="stylesheet">
+    <style>
+        .modal-dialog {
+            max-width: 500px;
+        }
+
+        .justify-content-center {
+            -webkit-box-pack: center !important;
+            -ms-flex-pack: center !important;
+            justify-content: center !important;
+        }
+
+        .single-service-wrap {
+            text-align: center;
+            box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.06);
+            border-radius: 0 0 5px 5px;
+            transition: all 0.4s ease-in;
+        }
+
+            .single-service-wrap .thumb::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(to right,#4ca1af,#c4e0e5);
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                z-index: -1;
+                transition: all 0.4s ease-in;
+            }
+
+            .single-service-wrap .thumb {
+                height: 181px;
+                width: 181px;
+                background: url(demo/html/mingrand/assets/img/service/bg.png);
+                border-radius: 50%;
+                line-height: 178px;
+                display: inline-block;
+                border: 4px solid #ffffff;
+                margin-top: -50%;
+                position: relative;
+                z-index: 1;
+            }
+
+            .single-service-wrap:hover .thumb::after {
+                opacity: 0;
+            }
+
+            .single-service-wrap:hover {
+                background:linear-gradient(to right,#cc2b5e,#753a88);
+            }
+
+
+            .single-service-wrap .single-service-details {
+                padding: 25px 30px 36px;
+            }
+
+                .single-service-wrap .single-service-details h4 {
+                    font-size: 26px;
+                    font-weight: 500;
+                    margin-bottom: 15px;
+                }
+
+                    .single-service-wrap .single-service-details h4 a {
+                        transition: all 0.4s ease-in;
+                    }
+
+            .single-service-wrap:hover p, .single-service-wrap:hover h4 a {
+                color: #ffffff;
+            }
+
+            .single-service-wrap .single-service-details p {
+                transition: all 0.4s ease-in;
+            }
+
+            .single-service-wrap:hover p, .single-service-wrap:hover h4 a {
+                color: #ffffff;
+            }
+
+            .single-service-wrap .single-service-details h4 a {
+                transition: all 0.4s ease-in;
+                font-weight: 600;
+                font-size: 20px;
+            }
+    </style>
+</head>
+
+<body class="green-skin">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div id="preloader"><div class="preloader"><span></span><span></span></div></div>
+
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+
+        <!-- ============================================================== -->
+        <!-- Top header  -->
+        <!-- ============================================================== -->
+       {% include 'infra/includes/header.html' %}
+        <!-- ============================================================== -->
+        <!-- Top header  -->
+        <!-- ============================================================== -->
+        <!-- ============================ Hero Banner  Start================================== -->
+        {% block content %}{% endblock content %}
+        <!-- ============================ Call To Action End ================================== -->
+        {% comment %} <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.831881968479!2d77.37102011440658!3d28.60481989208689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5635c7413bd%3A0x4e785ee132b56daf!2sState%20Bank%20of%20India!5e0!3m2!1sen!2sin!4v1653152610127!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> {% endcomment %}
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.831881968479!2d77.37102011440658!3d28.60481989208689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5635c7413bd%3A0x4e785ee132b56daf!2sState%20Bank%20of%20India!5e0!3m2!1sen!2sin!4v1653152610127!5m2!1sen!2sin" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <!-- ============================ Footer Start ================================== -->
+        {% include 'infra/includes/footer.html' %}
+        <!-- ============================ Footer End ================================== -->
+        <!-- Log In Modal -->
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+                <div class="modal-content" id="registermodal">
+                    <span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+                    <div class="modal-body">
+                        <h4 class="modal-header-title">Log In</h4>
+                        <div class="login-form">
+                            <form>
+
+                                <div class="form-group">
+                                    <label>User Name</label>
+                                    <div class="input-with-icon">
+                                        <input type="text" class="form-control" placeholder="Username">
+                                        <i class="ti-user"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <div class="input-with-icon">
+                                        <input type="password" class="form-control" placeholder="*******">
+                                        <i class="ti-unlock"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-md full-width pop-login">Login</button>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-divider"><span>Or login via</span></div>
+                        <div class="social-login mb-3">
+                            <ul>
+                                <li><a href="#" class="btn connect-fb"><i class="ti-facebook"></i>Facebook</a></li>
+                                <li><a href="#" class="btn connect-twitter"><i class="ti-twitter"></i>Twitter</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-center">
+                            <p class="mt-5"><a href="#" class="link">Forgot password?</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+        <!-- Sign Up Modal -->
+        <div class="modal fade signup" id="signup" tabindex="-1" role="dialog" aria-labelledby="sign-up" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+                <div class="modal-content" id="sign-up">
+                    <span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+                    <div class="modal-body">
+                        <h4 class="modal-header-title">Sign Up</h4>
+                        <div class="login-form">
+                            <form>
+
+                                <div class="row">
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="text" class="form-control" placeholder="Full Name">
+                                                <i class="ti-user"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="email" class="form-control" placeholder="Email">
+                                                <i class="ti-email"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="text" class="form-control" placeholder="Username">
+                                                <i class="ti-user"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="password" class="form-control" placeholder="*******">
+                                                <i class="ti-unlock"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="password" class="form-control" placeholder="123 546 5847">
+                                                <i class="lni-phone-handset"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <select class="form-control">
+                                                    <option>As a Customer</option>
+                                                    <option>As a Agent</option>
+                                                    <option>As a Agency</option>
+                                                </select>
+                                                <i class="ti-briefcase"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-md full-width pop-login">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-divider"><span>Or login via</span></div>
+                        <div class="social-login mb-3">
+                            <ul>
+                                <li><a href="#" class="btn connect-fb"><i class="ti-facebook"></i>Facebook</a></li>
+                                <li><a href="#" class="btn connect-twitter"><i class="ti-twitter"></i>Twitter</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-center">
+                            <p class="mt-5"><i class="ti-user mr-1"></i>Already Have An Account? <a href="#" class="link">Go For LogIn</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+
+        <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+    </div>
+    <style>
+        #bonanzaModal {
+            background: #00000082;
+        }
+
+        p {
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+
+        .img--layout {
+            max-width: 100px;
+        }
+    </style>
+
+    <!--<div class="modal fadeOut" id="bonanzaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document" style="margin-top: 50px; background: none; border:7px solid #fff;">
+            <div class="modal-content" style="background: none; box-shadow: none;">
+                <button type="button" class=" pull-right" style="z-index: 1116;margin-bottom: -18px;position: absolute;right: -7px;border: none;top: -7px;background: #e21b1b;"
+                        data-dismiss="modal" id="closeModal">
+                    <i class="">
+                        <img src="https://image.flaticon.com/icons/png/512/458/458594.png" style="width: 40px;">
+                    </i>
+                </button>
+                <div class="modal-body" style="padding: 0px;">
+                    <img src="assets/img/popup.jpg" class="img-responsive" style="margin:0 auto; display:block;" />
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- Color Switcher -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="{% static 'assets\js\bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'infra/assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'infra/assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'infra/assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'infra/assets/js/rangeslider.js' %}"></script>
+    <script src="{% static 'infra/assets/js/select2.min.js' %}"></script>
+    <script src="{% static 'infra/assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'infra/assets/js/slick.js' %}"></script>
+    <script src="{% static 'infra/assets/js/slider-bg.js' %}"></script>
+    <script src="{% static 'infra/assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'infra/assets/js/imagesloaded.js' %}"></script>
+    <script src="{% static 'infra/assets/js/custom.js' %}"></script>
+    <script src="{% static 'infra/assets/js/cl-switch.js' %}"></script>
+    <script type="text/javascript">
+        //            $(window).load(function () {
+        $(document).ready(function () {
+            //$('#bonanzaModal').fadeIn();
+            setTimeout(function () {
+                $("#bonanzaModal").delay(1000).fadeIn();
+            }, 1000);
+            $('#closeModal').click(function (e) {
+                $('#bonanzaModal').fadeOut();
+            });
+            $('#closeModal2').click(function (e) {
+                $('#bonanzaModal').fadeOut();
+            });
+        });
+    </script>
+
+    
+
+    
+</body>
+</html>
